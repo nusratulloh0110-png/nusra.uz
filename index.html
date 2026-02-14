@@ -174,16 +174,23 @@
             </div>
 
             <div class="modal-grid">
+                
                 <div class="interactive-terminal">
                     <div class="term-header">
                         <span></span><span></span><span></span>
                         <div class="term-title">system.log</div>
                     </div>
-                    <div class="term-body" id="sysTerminal">
-                    </div>
+                    <div class="term-body" id="sysTerminal"></div>
                 </div>
 
                 <form id="orderForm" class="calc-form">
+                    
+                    <div class="mobile-term-btn-wrapper">
+                        <button type="button" class="btn-gold-outline mobile-term-btn" onclick="toggleMobileTerminal()">
+                            <i class="fas fa-terminal"></i> <span data-key="btnToggleTerm">Терминал (Логи)</span>
+                        </button>
+                    </div>
+
                     <div class="calc-block">
                         <label data-key="labelService">Какая услуга вам нужна?</label>
                         <div class="service-grid">
@@ -283,6 +290,11 @@
                 <button class="btn-gold" onclick="confirmAiLang()" style="background: #111;" data-key="aiModalConfirm">Включить AI</button>
             </div>
         </div>
+    </div>
+
+    <div id="siteToast" class="site-toast">
+        <i class="fas fa-check-circle toast-icon"></i>
+        <span id="toastMessage">Успешно!</span>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

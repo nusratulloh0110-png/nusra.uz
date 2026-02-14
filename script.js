@@ -19,7 +19,9 @@ const translations = {
         labelService: "Какая услуга вам нужна?", srv1: "Лендинг / Визитка", srv2: "Корпоративный сайт", srv3: "Telegram-бот", srv4: "Настройка БД / Парсер",
         labelOptions: "Дополнительные опции:", opt1: "Уникальный дизайн", opt2: "Мультиязычность (3 языка)", opt3: "Срочное выполнение", optFree: "[ БЕСПЛАТНО ]",
         labelData: "Ваши данные (String):", labelTotal: "Примерный бюджет:", btnSend: "Отправить заявку",
-        aiModalTitle: "Внимание: Режим ИИ", aiModalText: "Этот язык предназначен исключительно для парсинга большими языковыми моделями (LLM). <br><br><b>Только искусственный интеллект может прочитать и понять этот код.</b> Он представлен в виде символов и JSON-структур. Вы уверены, что хотите переключиться?", aiModalCancel: "Отмена", aiModalConfirm: "Включить AI"
+        btnToggleTerm: "Терминал (Логи)",
+        aiModalTitle: "Внимание: Режим ИИ", aiModalText: "Этот язык предназначен исключительно для парсинга большими языковыми моделями (LLM). <br><br><b>Только искусственный интеллект может прочитать и понять этот код.</b> Он представлен в виде символов и JSON-структур. Вы уверены, что хотите переключиться?", aiModalCancel: "Отмена", aiModalConfirm: "Включить AI",
+        toastSuccess: "Заявка успешно отправлена!", toastError: "Ошибка при отправке.", toastNetError: "Проблема с сетью."
     },
     uz: {
         navAbout: "Men haqimda", navPort: "Portfolio", btnOrder: "Xizmat buyurtma qilish", btnOrderMobile: "Buyurtma",
@@ -40,7 +42,9 @@ const translations = {
         labelService: "Qanday xizmat kerak?", srv1: "Lending / Vizitka", srv2: "Korporativ sayt", srv3: "Telegram-bot", srv4: "MB sozlash / Parser",
         labelOptions: "Qo'shimcha imkoniyatlar:", opt1: "Eksklyuziv dizayn", opt2: "Ko'p tillilik (3 til)", opt3: "Tezkor bajarish", optFree: "[ BEPUL ]",
         labelData: "Ma'lumotlaringiz (String):", labelTotal: "Taxminiy byudjet:", btnSend: "Ariza yuborish",
-        aiModalTitle: "Diqqat: AI Rejimi", aiModalText: "Ushbu til faqat yirik til modellari (LLM) tomonidan tahlil qilish uchun mo'ljallangan. <br><br><b>Faqat sun'iy intellekt ushbu kodni o'qiy oladi va tushunadi.</b> U ramzlar va JSON shaklida taqdim etilgan. O'tishga ishonchingiz komilmi?", aiModalCancel: "Bekor qilish", aiModalConfirm: "AI-ni yoqish"
+        btnToggleTerm: "Terminalni ochish",
+        aiModalTitle: "Diqqat: AI Rejimi", aiModalText: "Ushbu til faqat yirik til modellari (LLM) tomonidan tahlil qilish uchun mo'ljallangan. <br><br><b>Faqat sun'iy intellekt ushbu kodni o'qiy oladi va tushunadi.</b> U ramzlar va JSON shaklida taqdim etilgan. O'tishga ishonchingiz komilmi?", aiModalCancel: "Bekor qilish", aiModalConfirm: "AI-ni yoqish",
+        toastSuccess: "Ariza muvaffaqiyatli yuborildi!", toastError: "Yuborishda xatolik yuz berdi.", toastNetError: "Tarmoq xatosi."
     },
     en: {
         navAbout: "About Me", navPort: "Portfolio", btnOrder: "Order Service", btnOrderMobile: "Order",
@@ -61,7 +65,9 @@ const translations = {
         labelService: "What service do you need?", srv1: "Landing / Business Card", srv2: "Corporate Website", srv3: "Telegram Bot", srv4: "DB Setup / Parser",
         labelOptions: "Additional Options:", opt1: "Unique Design", opt2: "Multilingual (3 langs)", opt3: "Urgent Execution", optFree: "[ FREE ]",
         labelData: "Your Data (String):", labelTotal: "Estimated Budget:", btnSend: "Send Request",
-        aiModalTitle: "Warning: AI Mode", aiModalText: "This language is strictly designed for parsing by Large Language Models (LLM). <br><br><b>Only Artificial Intelligence can read and understand this code.</b> It is presented in symbols and JSON structures. Are you sure you want to switch?", aiModalCancel: "Cancel", aiModalConfirm: "Enable AI"
+        btnToggleTerm: "Show Terminal",
+        aiModalTitle: "Warning: AI Mode", aiModalText: "This language is strictly designed for parsing by Large Language Models (LLM). <br><br><b>Only Artificial Intelligence can read and understand this code.</b> It is presented in symbols and JSON structures. Are you sure you want to switch?", aiModalCancel: "Cancel", aiModalConfirm: "Enable AI",
+        toastSuccess: "Request sent successfully!", toastError: "Failed to send.", toastNetError: "Network error."
     },
     ai: {
         navAbout: "{ \"menu\": \"about_node\" }", navPort: "{ \"menu\": \"portfolio_array\" }", btnOrder: "[EXECUTE: order_service()]", btnOrderMobile: "EXEC",
@@ -82,7 +88,9 @@ const translations = {
         labelService: "payload.service_type =", srv1: "'landing_page'", srv2: "'corporate_web'", srv3: "'tg_bot_api'", srv4: "'db_parser'",
         labelOptions: "payload.options =", opt1: "'custom_ui'", opt2: "'i18n_support'", opt3: "'priority_high'", optFree: "COST: 0",
         labelData: "payload.user =", labelTotal: "RESPONSE.budget:", btnSend: "socket.emit('send')",
-        aiModalTitle: "SYS.WARN: LLM_MODE", aiModalText: "Warning: Switching to strict JSON/Code syntax designed for LLM parsing. Human readability will be deprecated.", aiModalCancel: "Abort", aiModalConfirm: "Proceed"
+        btnToggleTerm: "TOGGLE_TERM()",
+        aiModalTitle: "SYS.WARN: LLM_MODE", aiModalText: "Warning: Switching to strict JSON/Code syntax designed for LLM parsing. Human readability will be deprecated.", aiModalCancel: "Abort", aiModalConfirm: "Proceed",
+        toastSuccess: "STATUS: 200 OK", toastError: "STATUS: 500 ERR", toastNetError: "STATUS: NET_ERR"
     }
 };
 
@@ -99,11 +107,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('mobileDropdown').classList.toggle('active');
     };
 
-    // Закрытие мобильного меню при клике мимо него
     document.addEventListener('click', function(event) {
         const dropdown = document.getElementById('mobileDropdown');
         const toggleBtn = document.querySelector('.menu-toggle');
-        
         if (dropdown.classList.contains('active') && !dropdown.contains(event.target) && !toggleBtn.contains(event.target)) {
             dropdown.classList.remove('active');
         }
@@ -127,6 +133,21 @@ document.addEventListener('DOMContentLoaded', () => {
         e.target.value = formattedValue;
     });
 
+    // --- TOAST УВЕДОМЛЕНИЯ (ВМЕСТО ALERT) ---
+    function showToast(msgKey, type) {
+        const toast = document.getElementById('siteToast');
+        const toastMsg = document.getElementById('toastMessage');
+        const toastIcon = toast.querySelector('.toast-icon');
+        
+        const lang = localStorage.getItem('nusraLang') || 'ru';
+        toastMsg.innerHTML = translations[lang][msgKey] || msgKey;
+
+        toast.className = `site-toast ${type} show`;
+        toastIcon.className = type === 'success' ? 'fas fa-check-circle toast-icon' : 'fas fa-exclamation-circle toast-icon';
+
+        setTimeout(() => { toast.classList.remove('show'); }, 4000);
+    }
+
     // --- ИНТЕРАКТИВНЫЙ ТЕРМИНАЛ И ЛОГИКА КАЛЬКУЛЯТОРА ---
     const modal = document.getElementById('calcModal');
     const serviceRadios = document.querySelectorAll('input[name="projectType"]');
@@ -135,6 +156,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const orderForm = document.getElementById('orderForm');
     const sysTerminal = document.getElementById('sysTerminal');
     const logInputs = document.querySelectorAll('.log-input');
+
+    // Кнопка показа терминала на мобильных
+    window.toggleMobileTerminal = function() {
+        const term = document.querySelector('.interactive-terminal');
+        term.classList.toggle('show-mobile');
+        if(term.classList.contains('show-mobile')) {
+            scrollToBottom();
+        }
+    };
 
     function scrollToBottom() {
         if(sysTerminal) sysTerminal.scrollTop = sysTerminal.scrollHeight;
@@ -154,7 +184,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const fullText = `[${time}] ${msg}`;
         let i = 0;
-        
         function typeWriter() {
             if (i < fullText.length) {
                 p.textContent += fullText.charAt(i);
@@ -219,7 +248,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }));
 
-    // --- БЕЗОПАСНОСТЬ (XSS) ---
     function sanitizeInput(str) {
         if (!str) return "";
         return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
@@ -258,17 +286,17 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(res => {
             if (res.ok) { 
                 addLog("Response HTTP 200 OK. Data sent successfully.", "sys-info");
-                alert('Успешно отправлено! Заявка доставлена.'); 
+                showToast('toastSuccess', 'success'); // Красивое уведомление
                 orderForm.reset(); 
                 calculateTotal(); 
                 closeCalc(); 
             } else {
                 addLog("ERROR: API connection failed.", "sys-err");
-                alert('Ошибка отправки.');
+                showToast('toastError', 'error');
             }
         }).catch(() => {
             addLog("FATAL ERROR: Network unreachable.", "sys-err");
-            alert('Ошибка сети.');
+            showToast('toastNetError', 'error');
         }).finally(() => { 
             submitBtn.innerHTML = originalText; submitBtn.disabled = false; 
         });
