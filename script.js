@@ -1,7 +1,7 @@
 // --- СЛОВАРЬ ПЕРЕВОДОВ ---
 const translations = {
     ru: {
-        navAbout: "Обо мне", navPort: "Портфолио", btnOrder: "Заказать услугу",
+        navAbout: "Обо мне", navPort: "Портфолио", btnOrder: "Заказать услугу", btnOrderMobile: "Заказать",
         heroRole: "Middle+ Database Administrator",
         heroTitle: "Управляю <span class='gold-text'>данными</span> и создаю быстрые сайты.",
         heroSub: "Специалист подразделения цифровизации здравоохранения Uzinfocom. Автоматизирую рутину, проектирую базы данных и разрабатываю современные веб-интерфейсы.",
@@ -14,6 +14,7 @@ const translations = {
         port2Title: "Ассоциация Автодорожников", port2Text: "Разработка официального сайта (uzaya.uz). Современный дизайн, панель управления новостями на бэкенде и удобная структура.",
         port3Title: "Персональный лендинг", port3Text: "Создание стильного персонального сайта. Быстрая загрузка, адаптивный дизайн для мобильных устройств и интеграция форм.",
         btnView: "Смотреть сайт",
+        mobileLang: "Язык:",
         modalTitle: "Заказ <span class='gold-text'>услуг</span>", modalSub: "// Инициализация процесса сотрудничества",
         labelService: "Какая услуга вам нужна?", srv1: "Лендинг / Визитка", srv2: "Корпоративный сайт", srv3: "Telegram-бот", srv4: "Настройка БД / Парсер",
         labelOptions: "Дополнительные опции:", opt1: "Уникальный дизайн", opt2: "Мультиязычность (3 языка)", opt3: "Срочное выполнение", optFree: "[ БЕСПЛАТНО ]",
@@ -21,7 +22,7 @@ const translations = {
         aiModalTitle: "Внимание: Режим ИИ", aiModalText: "Этот язык предназначен исключительно для парсинга большими языковыми моделями (LLM). <br><br><b>Только искусственный интеллект может прочитать и понять этот код.</b> Он представлен в виде символов и JSON-структур. Вы уверены, что хотите переключиться?", aiModalCancel: "Отмена", aiModalConfirm: "Включить AI"
     },
     uz: {
-        navAbout: "Men haqimda", navPort: "Portfolio", btnOrder: "Xizmat buyurtma qilish",
+        navAbout: "Men haqimda", navPort: "Portfolio", btnOrder: "Xizmat buyurtma qilish", btnOrderMobile: "Buyurtma",
         heroRole: "Middle+ Database Administrator",
         heroTitle: "Ma'lumotlarni <span class='gold-text'>boshqaraman</span> va tezkor saytlar yarataman.",
         heroSub: "Uzinfocom sog'liqni saqlashni raqamlashtirish bo'limi mutaxassisi. Jarayonlarni avtomatlashtiraman, ma'lumotlar bazalarini loyihalashtiraman va zamonaviy veb-interfeyslarni yarataman.",
@@ -34,6 +35,7 @@ const translations = {
         port2Title: "Avtoyo'lchilar Assotsiatsiyasi", port2Text: "Rasmiy sayt (uzaya.uz) ishlab chiqish. Zamonaviy dizayn, yangiliklarni boshqarish paneli va qulay struktura.",
         port3Title: "Shaxsiy lending", port3Text: "Zamonaviy shaxsiy sayt yaratish. Tez yuklanish, mobil qurilmalar uchun mos dizayn va shakllar integratsiyasi.",
         btnView: "Saytni ko'rish",
+        mobileLang: "Til:",
         modalTitle: "Xizmat <span class='gold-text'>buyurtma qilish</span>", modalSub: "// Hamkorlik jarayonini boshlash",
         labelService: "Qanday xizmat kerak?", srv1: "Lending / Vizitka", srv2: "Korporativ sayt", srv3: "Telegram-bot", srv4: "MB sozlash / Parser",
         labelOptions: "Qo'shimcha imkoniyatlar:", opt1: "Eksklyuziv dizayn", opt2: "Ko'p tillilik (3 til)", opt3: "Tezkor bajarish", optFree: "[ BEPUL ]",
@@ -41,7 +43,7 @@ const translations = {
         aiModalTitle: "Diqqat: AI Rejimi", aiModalText: "Ushbu til faqat yirik til modellari (LLM) tomonidan tahlil qilish uchun mo'ljallangan. <br><br><b>Faqat sun'iy intellekt ushbu kodni o'qiy oladi va tushunadi.</b> U ramzlar va JSON shaklida taqdim etilgan. O'tishga ishonchingiz komilmi?", aiModalCancel: "Bekor qilish", aiModalConfirm: "AI-ni yoqish"
     },
     en: {
-        navAbout: "About Me", navPort: "Portfolio", btnOrder: "Order Service",
+        navAbout: "About Me", navPort: "Portfolio", btnOrder: "Order Service", btnOrderMobile: "Order",
         heroRole: "Middle+ Database Administrator",
         heroTitle: "Managing <span class='gold-text'>data</span> & building fast websites.",
         heroSub: "Specialist at Uzinfocom Healthcare Digitalization Department. I automate routines, design databases, and develop modern web interfaces.",
@@ -54,6 +56,7 @@ const translations = {
         port2Title: "Road Association", port2Text: "Official website development (uzaya.uz). Modern design, backend news management, and user-friendly structure.",
         port3Title: "Personal Landing", port3Text: "Creation of a stylish personal website. Fast loading, responsive mobile design, and form integration.",
         btnView: "View Site",
+        mobileLang: "Language:",
         modalTitle: "Order <span class='gold-text'>Service</span>", modalSub: "// Initialize collaboration",
         labelService: "What service do you need?", srv1: "Landing / Business Card", srv2: "Corporate Website", srv3: "Telegram Bot", srv4: "DB Setup / Parser",
         labelOptions: "Additional Options:", opt1: "Unique Design", opt2: "Multilingual (3 langs)", opt3: "Urgent Execution", optFree: "[ FREE ]",
@@ -61,7 +64,7 @@ const translations = {
         aiModalTitle: "Warning: AI Mode", aiModalText: "This language is strictly designed for parsing by Large Language Models (LLM). <br><br><b>Only Artificial Intelligence can read and understand this code.</b> It is presented in symbols and JSON structures. Are you sure you want to switch?", aiModalCancel: "Cancel", aiModalConfirm: "Enable AI"
     },
     ai: {
-        navAbout: "{ \"menu\": \"about_node\" }", navPort: "{ \"menu\": \"portfolio_array\" }", btnOrder: "[EXECUTE: order_service()]",
+        navAbout: "{ \"menu\": \"about_node\" }", navPort: "{ \"menu\": \"portfolio_array\" }", btnOrder: "[EXECUTE: order_service()]", btnOrderMobile: "EXEC",
         heroRole: "SYS.ROLE == 'DBA_MID_PLUS'",
         heroTitle: "DATA_MANAGE(TRUE) && <span class='gold-text'>WEB_BUILD(FAST)</span>;",
         heroSub: "context: 'Uzinfocom_Health_Dept'. functions: [automate_routine, design_db, build_ui]. status: 'ready'.",
@@ -74,6 +77,7 @@ const translations = {
         port2Title: "id: 'UZAYA_web'", port2Text: "params: { type: 'corporate', features: ['CMS', 'responsive'] }",
         port3Title: "id: 'Personal_Landing'", port3Text: "params: { speed: 'high', UX: 'premium' }",
         btnView: "HTTP GET /site",
+        mobileLang: "Lang_Select:",
         modalTitle: "POST <span class='gold-text'>/api/order</span>", modalSub: "// waiting for payload...",
         labelService: "payload.service_type =", srv1: "'landing_page'", srv2: "'corporate_web'", srv3: "'tg_bot_api'", srv4: "'db_parser'",
         labelOptions: "payload.options =", opt1: "'custom_ui'", opt2: "'i18n_support'", opt3: "'priority_high'", optFree: "COST: 0",
@@ -90,57 +94,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('nusraLang') || 'ru';
     applyLang(savedLang);
 
+    // --- МОБИЛЬНОЕ МЕНЮ (ТРИ ТОЧКИ) ---
+    window.toggleMobileMenu = function() {
+        document.getElementById('mobileDropdown').classList.toggle('active');
+    };
+
+    // Закрытие мобильного меню при клике мимо него
+    document.addEventListener('click', function(event) {
+        const dropdown = document.getElementById('mobileDropdown');
+        const toggleBtn = document.querySelector('.menu-toggle');
+        
+        if (dropdown.classList.contains('active') && !dropdown.contains(event.target) && !toggleBtn.contains(event.target)) {
+            dropdown.classList.remove('active');
+        }
+    });
+
     // --- МАСКА ДЛЯ НОМЕРА ТЕЛЕФОНА ---
     const phoneInput = document.getElementById('clientPhone');
-
-    // При клике на поле подставляем +998, если оно пустое
-    phoneInput.addEventListener('focus', function() {
-        if (this.value === '') {
-            this.value = '+998 ';
-        }
-    });
-
-    // Если ушли из поля и остался только префикс - очищаем
-    phoneInput.addEventListener('blur', function() {
-        if (this.value === '+998 ' || this.value === '+998') {
-            this.value = '';
-        }
-    });
-
+    phoneInput.addEventListener('focus', function() { if (this.value === '') this.value = '+998 '; });
+    phoneInput.addEventListener('blur', function() { if (this.value === '+998 ' || this.value === '+998') this.value = ''; });
     phoneInput.addEventListener('input', function(e) {
-        // Убираем всё, кроме цифр
         let inputNumbersValue = e.target.value.replace(/\D/g, '');
         let formattedValue = '';
-
-        if (!inputNumbersValue) {
-            return e.target.value = '';
-        }
-
-        // Если пользователь начинает вводить не с 998, принудительно добавляем
-        if (!inputNumbersValue.startsWith('998')) {
-            inputNumbersValue = '998' + inputNumbersValue;
-        }
-
-        // Ограничиваем длину 12 цифрами (998 + 9 цифр номера)
+        if (!inputNumbersValue) return e.target.value = '';
+        if (!inputNumbersValue.startsWith('998')) inputNumbersValue = '998' + inputNumbersValue;
         inputNumbersValue = inputNumbersValue.substring(0, 12);
-
-        // Форматируем номер
-        if (inputNumbersValue.length > 0) {
-            formattedValue += '+' + inputNumbersValue.substring(0, 3);
-        }
-        if (inputNumbersValue.length >= 4) {
-            formattedValue += ' (' + inputNumbersValue.substring(3, 5);
-        }
-        if (inputNumbersValue.length >= 6) {
-            formattedValue += ') ' + inputNumbersValue.substring(5, 8);
-        }
-        if (inputNumbersValue.length >= 9) {
-            formattedValue += '-' + inputNumbersValue.substring(8, 10);
-        }
-        if (inputNumbersValue.length >= 11) {
-            formattedValue += '-' + inputNumbersValue.substring(10, 12);
-        }
-
+        if (inputNumbersValue.length > 0) formattedValue += '+' + inputNumbersValue.substring(0, 3);
+        if (inputNumbersValue.length >= 4) formattedValue += ' (' + inputNumbersValue.substring(3, 5);
+        if (inputNumbersValue.length >= 6) formattedValue += ') ' + inputNumbersValue.substring(5, 8);
+        if (inputNumbersValue.length >= 9) formattedValue += '-' + inputNumbersValue.substring(8, 10);
+        if (inputNumbersValue.length >= 11) formattedValue += '-' + inputNumbersValue.substring(10, 12);
         e.target.value = formattedValue;
     });
 
@@ -251,7 +234,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const CHAT_ID = "1250243400"; 
 
         const name = sanitizeInput(document.getElementById('clientName').value);
-        // Маска и так защищает номер, но на всякий случай очищаем от тегов
         const phone = sanitizeInput(document.getElementById('clientPhone').value);
         const comment = sanitizeInput(document.getElementById('clientComment').value) || "Нет комментария";
 

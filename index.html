@@ -16,7 +16,8 @@
             <a href="#" class="logo">
                 <span class="code-tag">&lt;</span>Nusra<span class="code-tag">/&gt;</span>
             </a>
-            <div class="nav-links">
+
+            <div class="nav-links desktop-menu">
                 <a href="#about" data-key="navAbout">Обо мне</a>
                 <a href="#portfolio" data-key="navPort">Портфолио</a>
                 
@@ -28,6 +29,26 @@
                 </div>
 
                 <button onclick="openCalc()" class="btn-gold-outline" data-key="btnOrder">Заказать услугу</button>
+            </div>
+
+            <div class="mobile-menu-controls">
+                <button onclick="openCalc()" class="btn-gold-outline mobile-order-btn" data-key="btnOrderMobile">Заказать</button>
+                <button class="menu-toggle" onclick="toggleMobileMenu()">
+                    <i class="fas fa-ellipsis-v"></i>
+                </button>
+            </div>
+
+            <div class="mobile-dropdown" id="mobileDropdown">
+                <a href="#about" onclick="toggleMobileMenu()" data-key="navAbout">Обо мне</a>
+                <a href="#portfolio" onclick="toggleMobileMenu()" data-key="navPort">Портфолио</a>
+                
+                <div class="mobile-lang-title"><i class="fas fa-globe"></i> <span data-key="mobileLang">Язык:</span></div>
+                <div class="lang-switch-mobile">
+                    <button onclick="changeLang('ru'); toggleMobileMenu()" class="lang-btn active-lang">RU</button>
+                    <button onclick="changeLang('uz'); toggleMobileMenu()" class="lang-btn">UZ</button>
+                    <button onclick="changeLang('en'); toggleMobileMenu()" class="lang-btn">EN</button>
+                    <button onclick="changeLang('ai'); toggleMobileMenu()" class="lang-btn ai-btn">AI</button>
+                </div>
             </div>
         </div>
     </nav>
@@ -159,7 +180,7 @@
                         <div class="term-title">system.log</div>
                     </div>
                     <div class="term-body" id="sysTerminal">
-                        </div>
+                    </div>
                 </div>
 
                 <form id="orderForm" class="calc-form">
