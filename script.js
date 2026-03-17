@@ -1,4 +1,4 @@
-// --- СЛОВАРЬ ПЕРЕВОДОВ ---
+﻿// --- СЛОВАРЬ ПЕРЕВОДОВ ---
 const translations = {
     ru: {
         navAbout: "Обо мне", navPort: "Портфолио", btnOrder: "Заказать услугу", btnOrderMobile: "Заказать",
@@ -33,9 +33,10 @@ const translations = {
         titleAbout: "Ish joyim", aboutCompany: "UZINFOCOM Yagona integratori", aboutRole: "Middle+ DBA | Sog'liqni saqlashni raqamlashtirish bo'limi",
         aboutText: "Men raqamli sog'liqni saqlash milliy tizimini (DMED) yaratuvchi jamoada ishlayman. Mening vazifam — ma'lumotlar ishonchliligini ta'minlash va tibbiyotni yaxshilaydigan IT-yechimlarni joriy etish.",
         skill1: "<i class='fas fa-database gold-text'></i> MB loyihalash (PostgreSQL, MySQL)", skill2: "<i class='fas fa-robot gold-text'></i> Avtomatlashtirish va skriptlar", skill3: "<i class='fas fa-laptop-code gold-text'></i> Tezkor veb-ishlab chiqish",
-        titlePort: "Mening Loyihalarim", port1Title: "ZORDOC uchun dasturlar", port1Text: "Tibbiyot jarayonlarini avtomatlashtirish uchun 2 ta dasturiy mahsulot yaratdim: tahlillarni va referens qiymatlarni avtomatik qo'shish tizimi.",
+        titlePort: "Mening Loyihalarim", port1Title: "ZORDOC loyihasi", port1Text: "Bu murakkab turdagi veb-loyiha bo'lib, o'zining ichki tizimi, alohida EXE dasturi va ish jarayonlarini avtomatlashtiruvchi puxta arxitekturaga ega.",
         port2Title: "Avtoyo'lchilar Assotsiatsiyasi", port2Text: "Rasmiy sayt (uzaya.uz) ishlab chiqish. Zamonaviy dizayn, yangiliklarni boshqarish paneli va qulay struktura.",
         port3Title: "Shaxsiy lending", port3Text: "Zamonaviy shaxsiy sayt yaratish. Tez yuklanish, mobil qurilmalar uchun mos dizayn va shakllar integratsiyasi.",
+        port4Title: "Universitet ????????? tizimi", port4Text: "Toshkent davlat transport universiteti uchun ????????? sayti yaratildi. Tizim akademik ?????????lar bilan ishlashni soddalashtiradi va ichki jarayonlarni tezlashtiradi.",
         btnView: "Saytni ko'rish",
         mobileLang: "Til:",
         modalTitle: "Xizmat <span class='gold-text'>buyurtma qilish</span>", modalSub: "// Hamkorlik jarayonini boshlash",
@@ -56,9 +57,10 @@ const translations = {
         titleAbout: "Where I Work", aboutCompany: "UZINFOCOM Single Integrator", aboutRole: "Middle+ DBA | Healthcare Digitalization Dept.",
         aboutText: "I work in the team creating the National Digital Healthcare System (DMED). My task is to ensure data reliability, automate processes, and implement IT solutions.",
         skill1: "<i class='fas fa-database gold-text'></i> DB Design (PostgreSQL, MySQL)", skill2: "<i class='fas fa-robot gold-text'></i> Automation & Scripts", skill3: "<i class='fas fa-laptop-code gold-text'></i> Fast Web Development",
-        titlePort: "My Projects", port1Title: "Software for ZORDOC", port1Text: "Developed 2 software products for medical automation: auto-adding analysis system and auto-adding reference values module.",
+        titlePort: "My Projects", port1Title: "ZORDOC Project", port1Text: "A complex web platform with its own internal system, dedicated EXE application, and carefully built workflow automation logic.",
         port2Title: "Road Association", port2Text: "Official website development (uzaya.uz). Modern design, backend news management, and user-friendly structure.",
         port3Title: "Personal Landing", port3Text: "Creation of a stylish personal website. Fast loading, responsive mobile design, and form integration.",
+        port4Title: "University Grade System", port4Text: "Built a grade statement website for Tashkent State Transport University. The system streamlines academic record workflows and speeds up internal operations.",
         btnView: "View Site",
         mobileLang: "Language:",
         modalTitle: "Order <span class='gold-text'>Service</span>", modalSub: "// Initialize collaboration",
@@ -79,9 +81,10 @@ const translations = {
         titleAbout: "QUERY: SELECT workplace", aboutCompany: "db.companies.find({name: 'UZINFOCOM'})", aboutRole: "roles: ['DBA', 'Digital_Health']",
         aboutText: "system_prompt: 'Ensure data reliability for DMED system. Optimize queries. Deploy IT solutions globally.'",
         skill1: "<i class='fas fa-database gold-text'></i> DB_ENGINE: ['PgSQL', 'MySQL']", skill2: "<i class='fas fa-robot gold-text'></i> SCRIPTING: TRUE", skill3: "<i class='fas fa-laptop-code gold-text'></i> FRONTEND: 'OPTIMIZED'",
-        titlePort: "ARRAY: Projects[]", port1Title: "id: 'ZORDOC_auto'", port1Text: "params: { tasks: ['auto_analysis', 'reference_values'], status: 'deployed' }",
+        titlePort: "ARRAY: Projects[]", port1Title: "id: 'ZORDOC_core'", port1Text: "params: { type: 'complex_web_system', exe_client: true, internal_platform: true, status: 'deployed' }",
         port2Title: "id: 'UZAYA_web'", port2Text: "params: { type: 'corporate', features: ['CMS', 'responsive'] }",
         port3Title: "id: 'Personal_Landing'", port3Text: "params: { speed: 'high', UX: 'premium' }",
+        port4Title: "id: 'TSUT_vedomost'", port4Text: "params: { type: 'university_records', client: 'TSTU', status: 'active' }",
         btnView: "HTTP GET /site",
         mobileLang: "Lang_Select:",
         modalTitle: "POST <span class='gold-text'>/api/order</span>", modalSub: "// waiting for payload...",
@@ -228,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedService = document.querySelector('input[name="projectType"]:checked');
         if (selectedService) total += parseInt(selectedService.value);
         featureCheckboxes.forEach(cb => { if (cb.checked) total += parseInt(cb.value); });
-        totalPriceDisplay.textContent = `$${total}`;
+        totalPriceDisplay.textContent = `ОТ $${total}`;
     }
 
     serviceRadios.forEach(radio => radio.addEventListener('change', (e) => {
