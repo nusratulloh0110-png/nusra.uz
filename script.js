@@ -1,15 +1,15 @@
 ﻿const ruTexts = {
     navAbout: 'Обо мне', navPort: 'Портфолио', btnOrder: 'Рассчитать проект', btnOrderMobile: 'Рассчитать',
-    heroRole: 'Middle+ Database Administrator',
+    heroRole: 'System Integrator',
     heroTitle: "Управляю данными и создаю <span class='gold-text'>быстрые сайты</span>.",
     heroSub: 'Специалист подразделения цифровизации здравоохранения UZINFOCOM. Автоматизирую рутину, проектирую базы данных и разрабатываю современные веб-интерфейсы.',
     btnCalc: 'Рассчитать проект',
     termPersonal: '(Личный)', termWork: '(Рабочий)',
-    highlight1Label: 'Текущая роль', highlight1Value: 'Специалист цифровизации',
+    highlight1Label: 'Текущая роль', highlight1Value: 'System Integrator',
     highlight2Label: 'Предыдущий опыт', highlight2Value: 'DBA и базы данных',
     highlight3Label: 'Образование', highlight3Value: 'ТГТрУ',
     highlight4Label: 'Фокус', highlight4Value: 'Веб- и внутренние системы',
-    titleAbout: 'Где я работаю', aboutCompany: 'Единый интегратор UZINFOCOM', aboutRole: 'Middle+ DBA | Подразделение цифровизации здравоохранения',
+    titleAbout: 'Где я работаю', aboutCompany: 'Единый интегратор UZINFOCOM', aboutRole: 'System Integrator | ????????????? ???????????? ???????????????',
     aboutText: 'Я работаю в команде, создающей Национальную систему цифрового здравоохранения (DMED). Моя задача — обеспечивать надежность данных, автоматизировать процессы и внедрять IT-решения, которые улучшают медицину по всей стране.',
     skill1: "<i class='fas fa-link gold-text'></i> Проектирование БД и архитектуры цифровых решений",
     skill2: "<i class='fas fa-database gold-text'></i> Опыт DBA: PostgreSQL, MySQL, структура данных и надежность",
@@ -51,16 +51,16 @@
 
 const uzTexts = {
     navAbout: 'Men haqimda', navPort: 'Portfolio', btnOrder: 'Loyihani hisoblash', btnOrderMobile: 'Hisoblash',
-    heroRole: 'Middle+ Database Administrator',
+    heroRole: 'System Integrator',
     heroTitle: "Ma'lumotlarni boshqaraman va <span class='gold-text'>tezkor saytlar</span> yarataman.",
     heroSub: 'UZINFOCOM sog\'liqni saqlashni raqamlashtirish bo\'limi mutaxassisiman. Rutina ishlarni avtomatlashtiraman, ma\'lumotlar bazalarini loyihalayman va zamonaviy veb-interfeyslar ishlab chiqaman.',
     btnCalc: 'Loyihani hisoblash',
     termPersonal: '(Shaxsiy)', termWork: '(Ish)',
-    highlight1Label: 'Joriy rol', highlight1Value: 'Raqamlashtirish mutaxassisi',
+    highlight1Label: 'Joriy rol', highlight1Value: 'System Integrator',
     highlight2Label: 'Oldingi tajriba', highlight2Value: 'DBA va ma\'lumotlar bazalari',
     highlight3Label: 'Ta\'lim', highlight3Value: 'TDTU',
     highlight4Label: 'Yo\'nalish', highlight4Value: 'Veb va ichki tizimlar',
-    titleAbout: 'Qayerda ishlayman', aboutCompany: 'Yagona integrator UZINFOCOM', aboutRole: 'Middle+ DBA | Sog\'liqni saqlashni raqamlashtirish bo\'limi',
+    titleAbout: 'Qayerda ishlayman', aboutCompany: 'Yagona integrator UZINFOCOM', aboutRole: 'System Integrator | Sog\'liqni saqlashni raqamlashtirish bo\'limi',
     aboutText: 'Men Milliy sog\'liqni saqlashni raqamlashtirish tizimi (DMED) ustida ishlaydigan jamoada faoliyat yuritaman. Vazifam ma\'lumotlar ishonchliligini ta\'minlash, jarayonlarni avtomatlashtirish va mamlakat bo\'ylab tibbiyot sifatini yaxshilaydigan IT-yechimlarni joriy etishdir.',
     skill1: "<i class='fas fa-link gold-text'></i> MB va raqamli yechimlar arxitekturasini loyihalash",
     skill2: "<i class='fas fa-database gold-text'></i> DBA tajribasi: PostgreSQL, MySQL, ma\'lumotlar tuzilmasi va ishonchlilik",
@@ -102,16 +102,16 @@ const uzTexts = {
 
 const enTexts = {
     navAbout: 'About Me', navPort: 'Portfolio', btnOrder: 'Calculate Project', btnOrderMobile: 'Calculate',
-    heroRole: 'Middle+ Database Administrator',
+    heroRole: 'System Integrator',
     heroTitle: "I manage data and build <span class='gold-text'>fast websites</span>.",
     heroSub: 'I am a specialist in the healthcare digitalization division at UZINFOCOM. I automate routine work, design databases, and develop modern web interfaces.',
     btnCalc: 'Calculate Project',
     termPersonal: '(Personal)', termWork: '(Work)',
-    highlight1Label: 'Current role', highlight1Value: 'Digitalization specialist',
+    highlight1Label: 'Current role', highlight1Value: 'System Integrator',
     highlight2Label: 'Previous experience', highlight2Value: 'DBA and databases',
     highlight3Label: 'Education', highlight3Value: 'TSTU',
     highlight4Label: 'Focus', highlight4Value: 'Web and internal systems',
-    titleAbout: 'Where I Work', aboutCompany: 'Unified Integrator UZINFOCOM', aboutRole: 'Middle+ DBA | Healthcare Digitalization Division',
+    titleAbout: 'Where I Work', aboutCompany: 'Unified Integrator UZINFOCOM', aboutRole: 'System Integrator | Healthcare Digitalization Division',
     aboutText: 'I work in the team building the National Digital Healthcare System (DMED). My role is to ensure data reliability, automate processes, and implement IT solutions that improve healthcare across the country.',
     skill1: "<i class='fas fa-link gold-text'></i> Database design and digital solution architecture",
     skill2: "<i class='fas fa-database gold-text'></i> DBA experience: PostgreSQL, MySQL, data structure and reliability",
@@ -157,7 +157,7 @@ const translations = {
     en: enTexts,
     ai: {
         ...enTexts,
-        heroRole: "SYS.ROLE == 'MIDDLE_PLUS_DBA'",
+        heroRole: "SYS.ROLE == 'SYSTEM_INTEGRATOR'",
         heroTitle: "NUSRATULLOH_MIRKHODJAYEV => <span class='gold-text'>BUILD()</span> && AUTOMATE();",
         heroSub: "context: ['healthcare_digitalization', 'database_design', 'web_interfaces', 'automation']",
         btnCalc: 'init_calculator();',
@@ -395,7 +395,6 @@ function applyLang(lang) {
     if (commentInput) commentInput.placeholder = dict.placeholderComment || translations.ru.placeholderComment;
 
     calculateFallbackBudget(lang);
-    updateServicePriceLabels(lang);
 
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.remove('active-lang');
