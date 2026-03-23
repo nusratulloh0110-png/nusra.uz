@@ -278,6 +278,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return 'FROM $' + total;
     }
 
+    function updateServicePriceLabels(lang) {
+        document.querySelectorAll('.srv-price[data-base-price]').forEach(node => {
+            const price = parseInt(node.dataset.basePrice, 10);
+            node.textContent = formatBudget(lang, price);
+        });
+    }
+
     function calculateTotal() {
         let total = 0;
         const selectedService = document.querySelector('input[name="projectType"]:checked');
@@ -287,6 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         const lang = localStorage.getItem('nusraLang') || 'ru';
         totalPriceDisplay.textContent = formatBudget(lang, total);
+        updateServicePriceLabels(lang);
     }
 
     serviceRadios.forEach(radio => radio.addEventListener('change', e => {
@@ -387,6 +395,7 @@ function applyLang(lang) {
     if (commentInput) commentInput.placeholder = dict.placeholderComment || translations.ru.placeholderComment;
 
     calculateFallbackBudget(lang);
+    updateServicePriceLabels(lang);
 
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.remove('active-lang');

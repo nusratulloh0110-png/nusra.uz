@@ -246,3 +246,296 @@ a { text-decoration: none; color: inherit; }
     .hero-highlights { grid-template-columns: 1fr; }
     .service-grid-extended { grid-template-columns: 1fr; }
 }
+
+
+body {
+    background:
+        radial-gradient(circle at top left, rgba(212, 175, 55, 0.14), transparent 28%),
+        radial-gradient(circle at top right, rgba(30, 30, 30, 0.05), transparent 24%),
+        linear-gradient(180deg, #fffdf7 0%, #ffffff 32%, #f7f8fb 100%);
+}
+
+.hero-content {
+    max-width: 980px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    max-width: 760px;
+    padding: 18px 22px;
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 18px 40px rgba(17, 24, 39, 0.05);
+}
+
+.hero-highlights {
+    margin-top: 8px;
+    margin-bottom: 24px;
+}
+
+.highlight-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    border-radius: 18px;
+    padding: 18px 18px 20px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(249,250,252,0.94));
+    box-shadow: 0 18px 36px rgba(15, 23, 42, 0.06);
+}
+
+.highlight-card::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: linear-gradient(180deg, var(--gold), rgba(212, 175, 55, 0.15));
+}
+
+.highlight-label {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.highlight-card strong {
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+.contact-terminal {
+    margin-top: 18px;
+    max-width: 720px;
+    border: 1px solid rgba(212, 175, 55, 0.16);
+    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.12);
+}
+
+.about-card {
+    grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+    display: grid;
+    gap: 32px;
+    padding: 32px;
+    border-radius: 24px;
+    border: 1px solid rgba(212, 175, 55, 0.18);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.06);
+}
+
+.company-logo {
+    width: 100%;
+    max-width: 220px;
+    padding: 18px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #ffffff, #f7f8fb);
+    border: 1px solid var(--border-color);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.about-text p[data-key='aboutText'] {
+    font-size: 1rem;
+    line-height: 1.85;
+    padding: 18px 20px;
+    background: linear-gradient(180deg, rgba(248,249,250,0.95), rgba(255,255,255,0.95));
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+}
+
+.role {
+    display: inline-flex;
+    align-self: flex-start;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+.tech-stack {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin-top: 6px;
+}
+
+.tech-stack li {
+    padding: 16px 16px 16px 18px;
+    border-radius: 18px;
+    background: #fff;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.04);
+}
+
+.info-card, .stat-card, .process-card, .port-card {
+    border-radius: 20px;
+    border: 1px solid rgba(212, 175, 55, 0.12);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.05);
+}
+
+.info-card, .stat-card, .process-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card::before, .stat-card::before, .process-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold), rgba(212, 175, 55, 0.15));
+}
+
+.info-card p, .stat-card p, .process-card p, .port-card p {
+    color: #4b5563;
+}
+
+.stat-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+}
+
+.port-card {
+    padding: 26px;
+    background: linear-gradient(180deg, #ffffff, #fcfcfd);
+}
+
+.port-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 26px 50px rgba(15, 23, 42, 0.1);
+}
+
+.badge {
+    border-radius: 999px;
+    background: rgba(212, 175, 55, 0.1);
+    color: #8a6d16;
+    border: 1px solid rgba(212, 175, 55, 0.16);
+}
+
+.port-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.format-pill {
+    border-radius: 16px;
+    padding: 14px 18px;
+    border: 1px solid rgba(212, 175, 55, 0.14);
+    background: linear-gradient(180deg, #ffffff, #fafaf8);
+}
+
+.modal-content {
+    border: 1px solid rgba(212, 175, 55, 0.14);
+    box-shadow: 0 34px 80px rgba(15, 23, 42, 0.2);
+}
+
+.modal-header h2 {
+    font-size: 2rem;
+    line-height: 1.1;
+}
+
+.calc-block {
+    padding: 18px;
+    border: 1px solid var(--border-color);
+    border-radius: 18px;
+    background: linear-gradient(180deg, #ffffff, #fbfbfc);
+}
+
+.service-card {
+    border-radius: 18px;
+    padding: 18px;
+    gap: 14px;
+    background: linear-gradient(180deg, #ffffff, #fafbfc);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.03);
+}
+
+.service-radio input:checked + .service-card {
+    border-color: rgba(212, 175, 55, 0.9);
+    background: linear-gradient(180deg, rgba(212, 175, 55, 0.12), rgba(255, 255, 255, 0.98));
+    box-shadow: 0 18px 36px rgba(212, 175, 55, 0.14);
+}
+
+.srv-info {
+    align-items: flex-start;
+}
+
+.srv-title {
+    display: block;
+    font-size: 0.96rem;
+    line-height: 1.35;
+}
+
+.srv-price {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    background: #f8f9fa;
+    color: #475467;
+    font-size: 0.92rem;
+    letter-spacing: 0.01em;
+}
+
+.service-radio input:checked + .service-card .srv-price {
+    border-color: rgba(212, 175, 55, 0.35);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.custom-checkbox {
+    min-height: 24px;
+    padding: 14px 14px 14px 42px;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: #fff;
+}
+
+.total-price-box {
+    padding: 16px 18px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #111827, #1f2937);
+    color: #fff;
+    min-width: 240px;
+}
+
+.total-label {
+    color: rgba(255,255,255,0.72);
+    margin-bottom: 8px;
+}
+
+.total-amount {
+    color: #f4cf62;
+}
+
+@media (max-width: 768px) {
+    .subtitle {
+        padding: 16px;
+    }
+
+    .about-card {
+        display: flex;
+        padding: 22px 18px;
+        border-radius: 20px;
+    }
+
+    .role {
+        align-self: center;
+    }
+
+    .tech-stack {
+        grid-template-columns: 1fr;
+    }
+
+    .calc-block {
+        padding: 14px;
+    }
+
+    .total-price-box {
+        width: 100%;
+    }
+}
