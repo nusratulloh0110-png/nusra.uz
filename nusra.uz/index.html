@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="description" content="Nusra - Process Design &amp; Automation в UZINFOCOM. Автоматизация процессов и рабочие цифровые решения.">
+    <title>Nusra | Process Design &amp; Automation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="cursor-follower" aria-hidden="true"></div>
+
+    <nav class="site-nav" aria-label="Главная навигация">
+        <div class="container nav-inner">
+            <a class="logo" href="#top" aria-label="Nusra, на главную">
+                <span>&lt;</span>Nusra<span>/&gt;</span>
+            </a>
+
+            <div class="nav-desktop">
+                <a href="#about" data-key="navAbout">Обо мне</a>
+                <a href="#services" data-key="navServices">Результаты</a>
+                <a href="#projects" data-key="navPort">Проекты</a>
+                <div class="language-switch" aria-label="Выбор языка">
+                    <button type="button" class="lang-button is-active" data-lang="ru">RU</button>
+                    <button type="button" class="lang-button" data-lang="uz">UZ</button>
+                    <button type="button" class="lang-button" data-lang="en">EN</button>
+                </div>
+                <button type="button" class="button button-outline" data-open-calc data-key="btnOrder">Рассчитать</button>
+            </div>
+
+            <button type="button" class="menu-button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu-links">
+            <a href="#about" data-key="navAbout">Обо мне</a>
+            <a href="#services" data-key="navServices">Результаты</a>
+            <a href="#projects" data-key="navPort">Проекты</a>
+        </div>
+        <div class="language-switch" aria-label="Выбор языка">
+            <button type="button" class="lang-button is-active" data-lang="ru">RU</button>
+            <button type="button" class="lang-button" data-lang="uz">UZ</button>
+            <button type="button" class="lang-button" data-lang="en">EN</button>
+        </div>
+        <button type="button" class="button button-primary" data-open-calc data-key="btnOrder">Рассчитать</button>
+    </aside>
+
+    <main id="top">
+        <header class="hero">
+            <div class="dot-grid" aria-hidden="true"></div>
+            <div class="container hero-layout">
+                <div class="status-pill reveal">
+                    <span class="terminal-prompt">&gt;_</span>
+                    <span data-key="heroRole">Process Design &amp; Automation</span>
+                    <span class="typing-cursor" aria-hidden="true"></span>
+                </div>
+
+                <h1 class="hero-title reveal" data-html-key="heroTitle">
+                    Проектирую.<br><span>Автоматизирую.</span>
+                </h1>
+
+                <div class="hero-lower">
+                    <p class="hero-copy reveal" data-key="heroSub">Process Design &amp; Automation в UZINFOCOM. Проектирую процессы, автоматизирую операции и создаю рабочие цифровые продукты.</p>
+                    <button type="button" class="button button-primary hero-action reveal" data-open-calc data-key="btnCalc">Рассчитать проект</button>
+                </div>
+
+                <div class="hero-stats" aria-label="Ключевая информация">
+                    <article class="hero-stat reveal" style="--delay: 80ms">
+                        <span data-key="highlight1Label">Текущая роль</span>
+                        <strong data-key="highlight1Value">Process Design &amp; Automation</strong>
+                    </article>
+                    <article class="hero-stat reveal" style="--delay: 140ms">
+                        <span data-key="highlight2Label">Опыт</span>
+                        <strong data-key="highlight2Value">DBA и базы данных</strong>
+                    </article>
+                    <article class="hero-stat reveal" style="--delay: 200ms">
+                        <span data-key="highlight3Label">Образование</span>
+                        <strong data-key="highlight3Value">TSTU</strong>
+                    </article>
+                    <article class="hero-stat reveal" style="--delay: 260ms">
+                        <span data-key="highlight4Label">Фокус</span>
+                        <strong data-key="highlight4Value">Интеграции и веб-системы</strong>
+                    </article>
+                </div>
+            </div>
+        </header>
+
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section-divider reveal"><span>// about</span></div>
+                <div class="about-grid">
+                    <div class="about-heading reveal">
+                        <div class="metric">
+                            <span class="metric-number">03</span>
+                            <span class="metric-caption" data-key="metricCaption">ключевые компетенции</span>
+                        </div>
+                        <h2 data-html-key="aboutTitle">Данные. Процессы.<br><span>Интерфейсы.</span></h2>
+                        <p data-key="aboutIntro">Связываю сложные цифровые процессы в понятные и надёжные рабочие инструменты.</p>
+                    </div>
+
+                    <div class="competency-panel">
+                        <div class="availability reveal">
+                            <span class="availability-dot" aria-hidden="true"></span>
+                            <span data-key="availability">Available for work</span>
+                        </div>
+                        <article class="competency-card reveal" style="--delay: 80ms">
+                            <span class="competency-icon">01</span>
+                            <p data-key="skill1">Проектирование процессов и архитектура автоматизации</p>
+                        </article>
+                        <article class="competency-card reveal" style="--delay: 140ms">
+                            <span class="competency-icon">02</span>
+                            <p data-key="skill2">Сильный бэкграунд в PostgreSQL, MySQL и моделировании данных</p>
+                        </article>
+                        <article class="competency-card reveal" style="--delay: 200ms">
+                            <span class="competency-icon">03</span>
+                            <p data-key="skill3">Автоматизация, скрипты, EXE-инструменты и веб-интерфейсы</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section work-section" id="work">
+            <div class="container">
+                <div class="section-divider reveal"><span>// where_i_work</span></div>
+                <article class="work-card reveal">
+                    <div class="work-header">
+                        <div class="company-mark" aria-label="UZINFOCOM">
+                            <img src="img/uzinfocom-symbol.png" alt="" class="company-symbol">
+                            <span class="company-wordmark">UZINFOCOM</span>
+                        </div>
+                        <div class="work-position">
+                            <p class="mono" data-key="aboutRole">Process Design &amp; Automation | UZINFOCOM</p>
+                            <div class="pills">
+                                <span>Process Design</span>
+                                <span>Automation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="work-summary" data-key="aboutText">В UZINFOCOM проектирую процессы и автоматизирую рабочие операции: от структуры данных и сценариев до удобных внутренних инструментов.</p>
+                    <div class="work-details">
+                        <article>
+                            <span class="background-index">01</span>
+                            <h3 data-key="journeyTitle">Путь</h3>
+                            <p data-key="journeyText">От DBA к Process Design &amp; Automation: от глубокой работы с данными к проектированию и автоматизации процессов.</p>
+                        </article>
+                        <article>
+                            <span class="background-index">02</span>
+                            <h3 data-key="educationTitle">Образование</h3>
+                            <p data-key="educationText">Студент Ташкентского государственного транспортного университета, совмещаю учёбу с реальной проектной практикой.</p>
+                        </article>
+                        <article>
+                            <span class="background-index">03</span>
+                            <h3 data-key="sectorTitle">Опыт</h3>
+                            <p data-key="sectorText">Госсервисы, цифровизация здравоохранения, веб-разработка и внутренняя автоматизация.</p>
+                        </article>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section services-section" id="services">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="section-label">// results</p>
+                    <h2 data-key="titleResults">Результаты</h2>
+                </div>
+                <div class="services-track" data-swipe-track>
+                    <article class="service-item reveal" style="--delay: 60ms">
+                        <span class="service-number">01</span>
+                        <h3 data-key="result1Title">DMED</h3>
+                        <p data-key="result1Text">Участвую в решениях для национальной медицинской системы, где критичны надёжность данных и стабильность процессов.</p>
+                    </article>
+                    <article class="service-item reveal" style="--delay: 110ms">
+                        <span class="service-number">02</span>
+                        <h3 data-key="result2Title">Веб-решения</h3>
+                        <p data-key="result2Text">Создаю сайты и внутренние платформы с акцентом на скорость, понятность и практичность.</p>
+                    </article>
+                    <article class="service-item reveal" style="--delay: 160ms">
+                        <span class="service-number">03</span>
+                        <h3 data-key="result3Title">Интеграции</h3>
+                        <p data-key="result3Text">Связываю базы данных, API, ботов и внутренние сервисы в единую работающую систему.</p>
+                    </article>
+                    <article class="service-item reveal" style="--delay: 210ms">
+                        <span class="service-number">04</span>
+                        <h3 data-key="result4Title">Автоматизация</h3>
+                        <p data-key="result4Text">Сокращаю ручную работу через автоматизацию отчётов, обмена данными и операционных процессов.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section process-section" id="process">
+            <div class="container process-layout">
+                <div class="section-head reveal">
+                    <p class="section-label">// how_i_work</p>
+                    <h2 data-key="titleProcess">Как я работаю</h2>
+                </div>
+                <div class="timeline" data-timeline>
+                    <span class="timeline-track" aria-hidden="true"></span>
+                    <span class="timeline-fill" aria-hidden="true"></span>
+                    <article class="timeline-step reveal">
+                        <span>01</span>
+                        <h3 data-key="process1Title">Анализ</h3>
+                        <p data-key="process1Text">Разбираю процесс, ограничения и ожидаемый результат.</p>
+                    </article>
+                    <article class="timeline-step reveal">
+                        <span>02</span>
+                        <h3 data-key="process2Title">Проектирование</h3>
+                        <p data-key="process2Text">Определяю структуру сервисов, API, данных и ролей.</p>
+                    </article>
+                    <article class="timeline-step reveal">
+                        <span>03</span>
+                        <h3 data-key="process3Title">Реализация</h3>
+                        <p data-key="process3Text">Разрабатываю интерфейсы, интеграции, ботов и внутренние модули.</p>
+                    </article>
+                    <article class="timeline-step reveal">
+                        <span>04</span>
+                        <h3 data-key="process4Title">Запуск и поддержка</h3>
+                        <p data-key="process4Text">Тестирую, запускаю и довожу решение до стабильной работы.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="section-label">// projects</p>
+                    <h2 data-key="titlePort">Проекты</h2>
+                </div>
+                <div class="filesystem reveal" role="table" aria-label="Список проектов">
+                    <div class="project-header" role="row">
+                        <span data-key="projectName">/ name</span>
+                        <span data-key="projectCategory">type</span>
+                        <span class="project-year" data-key="projectYear">status</span>
+                        <span aria-hidden="true"></span>
+                    </div>
+                    <button type="button" class="project-row" data-project="0" role="row">
+                        <span class="project-main">
+                            <strong data-key="qaiTitle">q-ai.uz / Quantum-AI Wealth Guardian</strong>
+                            <small data-key="qaiSummary">AI-сервис для оценки риска криптопортфеля и расчёта целевых весов.</small>
+                        </span>
+                        <span class="tag">AI / FinTech</span>
+                        <span class="project-year">LIVE</span>
+                        <span class="row-arrow">-&gt;</span>
+                    </button>
+                    <button type="button" class="project-row" data-project="1" role="row">
+                        <span class="project-main">
+                            <strong data-key="saaliTitle">saali.uz</strong>
+                            <small data-key="saaliSummary">Магазин и лендинг дизайнерши с презентацией бренда и каталогом.</small>
+                        </span>
+                        <span class="tag" data-key="saaliBadge">E-commerce / Design</span>
+                        <span class="project-year">LIVE</span>
+                        <span class="row-arrow">-&gt;</span>
+                    </button>
+                    <button type="button" class="project-row" data-project="2" role="row">
+                        <span class="project-main">
+                            <strong data-key="port1Title">Система цифровизации здравоохранения</strong>
+                            <small data-key="port1Summary">Рабочие инструменты и автоматизация медицинских процессов.</small>
+                        </span>
+                        <span class="tag">Healthcare</span>
+                        <span class="project-year">LIVE</span>
+                        <span class="row-arrow">-&gt;</span>
+                    </button>
+                    <button type="button" class="project-row" data-project="3" role="row">
+                        <span class="project-main">
+                            <strong data-key="port2Title">Ассоциация автодорожников Узбекистана</strong>
+                            <small data-key="port2Summary">Официальный сайт отраслевой ассоциации с удобной подачей информации.</small>
+                        </span>
+                        <span class="tag" data-key="port2Badge">Веб-разработка</span>
+                        <span class="project-year">LIVE</span>
+                        <span class="row-arrow">-&gt;</span>
+                    </button>
+                    <button type="button" class="project-row" data-project="4" role="row">
+                        <span class="project-main">
+                            <strong data-key="port3Title">Персональный лендинг</strong>
+                            <small data-key="port3Summary">Личный сайт для презентации экспертизы и контактов.</small>
+                        </span>
+                        <span class="tag" data-key="port3Badge">Персональный сайт</span>
+                        <span class="project-year">LIVE</span>
+                        <span class="row-arrow">-&gt;</span>
+                    </button>
+                    <button type="button" class="project-row" data-project="5" role="row">
+                        <span class="project-main">
+                            <strong data-key="port4Title">Система ведомостей университета</strong>
+                            <small data-key="port4Summary">Веб-сервис для автоматизации академических ведомостей.</small>
+                        </span>
+                        <span class="tag">University</span>
+                        <span class="project-year">LIVE</span>
+                        <span class="row-arrow">-&gt;</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+        <div class="footer-watermark" aria-hidden="true">&lt;N/&gt;</div>
+        <div class="container footer-content">
+            <p class="section-label reveal">// contact</p>
+            <h2 class="reveal" data-html-key="footerTitle">Готов к новым<br><span>проектам.</span></h2>
+            <div class="footer-contacts reveal">
+                <a class="terminal-link" href="tel:+998974807181"><span>$ phone.personal</span>+998 97 480 71 81</a>
+                <a class="terminal-link" href="tel:+998946966566"><span>$ phone.work</span>+998 94 696 65 66</a>
+            </div>
+            <div class="footer-bottom">
+                <div class="socials">
+                    <a href="https://t.me/Nusra12345" target="_blank" rel="noopener">Telegram</a>
+                    <a href="https://instagram.com/Nusratikk" target="_blank" rel="noopener">Instagram</a>
+                </div>
+                <span class="copyright">&copy; 2026 Nusra</span>
+                <div class="language-switch" aria-label="Выбор языка">
+                    <button type="button" class="lang-button is-active" data-lang="ru">RU</button>
+                    <button type="button" class="lang-button" data-lang="uz">UZ</button>
+                    <button type="button" class="lang-button" data-lang="en">EN</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <section class="overlay calculator-overlay" id="calcModal" role="dialog" aria-modal="true" aria-labelledby="calcTitle" aria-hidden="true">
+        <div class="calculator">
+            <header class="calculator-header">
+                <div>
+                    <p class="section-label">// calculate_project</p>
+                    <h2 id="calcTitle" data-html-key="modalTitle">Рассчитать <span>проект</span></h2>
+                </div>
+                <button type="button" class="close-button" data-close-calc aria-label="Закрыть">+</button>
+            </header>
+            <div class="progress">
+                <span class="progress-value" aria-hidden="true"></span>
+                <span class="progress-copy"><span data-key="stepLabel">шаг</span> <strong id="stepValue">01</strong> / 03</span>
+            </div>
+            <div class="calculator-grid">
+                <aside class="log-terminal" aria-label="System logs">
+                    <div class="terminal-header">
+                        <span></span><span></span><span></span>
+                        <small>system.log</small>
+                    </div>
+                    <div class="terminal-lines" id="sysTerminal" aria-live="polite"></div>
+                </aside>
+
+                <form class="calc-form" id="orderForm">
+                    <div class="calc-flow" id="calcFlow">
+                        <fieldset class="calc-step is-active" data-step="1">
+                            <legend data-key="labelService">Какая услуга нужна?</legend>
+                            <div class="choice-grid">
+                                <label class="choice">
+                                    <input type="radio" name="projectType" value="120" data-name="Landing / Business Card" checked>
+                                    <span><strong data-key="srv1">Лендинг / визитка</strong><small data-price="120">от $120</small></span>
+                                </label>
+                                <label class="choice">
+                                    <input type="radio" name="projectType" value="280" data-name="Corporate Website">
+                                    <span><strong data-key="srv2">Корпоративный сайт</strong><small data-price="280">от $280</small></span>
+                                </label>
+                                <label class="choice">
+                                    <input type="radio" name="projectType" value="150" data-name="Telegram Bot">
+                                    <span><strong data-key="srv3">Telegram-бот</strong><small data-price="150">от $150</small></span>
+                                </label>
+                                <label class="choice">
+                                    <input type="radio" name="projectType" value="170" data-name="DB Setup / Parser">
+                                    <span><strong data-key="srv4">Настройка БД / парсер</strong><small data-price="170">от $170</small></span>
+                                </label>
+                                <label class="choice">
+                                    <input type="radio" name="projectType" value="230" data-name="API / Service Integration">
+                                    <span><strong data-key="srv5">API / интеграция сервисов</strong><small data-price="230">от $230</small></span>
+                                </label>
+                                <label class="choice">
+                                    <input type="radio" name="projectType" value="390" data-name="Internal System / CRM / ERP Module">
+                                    <span><strong data-key="srv6">Внутренняя система / CRM / ERP модуль</strong><small data-price="390">от $390</small></span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="calc-step" data-step="2">
+                            <legend data-key="labelOptions">Дополнительные опции</legend>
+                            <label class="option">
+                                <input type="checkbox" class="feature-calc" value="80" data-name="Unique Design">
+                                <span class="checkbox"></span>
+                                <span data-key="opt1">Уникальный дизайн</span>
+                                <small>+ $80</small>
+                            </label>
+                            <label class="option">
+                                <input type="checkbox" class="feature-calc" value="0" data-name="Multilingual">
+                                <span class="checkbox"></span>
+                                <span data-key="opt2">Мультиязычность (3 языка)</span>
+                                <small data-key="optFree">[ бесплатно ]</small>
+                            </label>
+                            <label class="option">
+                                <input type="checkbox" class="feature-calc" value="70" data-name="Urgent Execution">
+                                <span class="checkbox"></span>
+                                <span data-key="opt3">Срочный запуск</span>
+                                <small>+ $70</small>
+                            </label>
+                        </fieldset>
+
+                        <fieldset class="calc-step" data-step="3">
+                            <legend data-key="labelData">Ваши данные</legend>
+                            <div class="estimate">
+                                <span data-key="labelTotal">Оценка бюджета</span>
+                                <strong id="totalPrice">от $120</strong>
+                            </div>
+                            <input type="text" id="clientName" required class="input log-input" data-field="Name" placeholder="Имя">
+                            <input type="tel" id="clientPhone" required class="input log-input" data-field="Phone" placeholder="+998 90 000 00 00">
+                            <textarea id="clientComment" class="input log-input" data-field="Comment" rows="3" placeholder="Комментарий"></textarea>
+                            <label class="website-field" aria-hidden="true">
+                                Leave empty
+                                <input type="text" id="clientWebsite" tabindex="-1" autocomplete="off">
+                            </label>
+                        </fieldset>
+
+                        <div class="calc-actions">
+                            <button type="button" class="button button-quiet" id="prevStep" data-key="btnBack">Назад</button>
+                            <button type="button" class="button button-primary" id="nextStep" data-key="btnNext">Далее</button>
+                            <button type="submit" class="button button-primary" id="submitBtn" data-key="btnSend">Отправить заявку</button>
+                        </div>
+                    </div>
+
+                    <div class="calc-result" id="calcResult" hidden>
+                        <p class="mono" data-key="resultReady">estimate.ready()</p>
+                        <strong id="resultPrice">от $120</strong>
+                        <p data-key="resultMessage">Заявка отправлена. Сообщение уже доставлено в Telegram.</p>
+                        <button type="button" class="button button-outline" data-close-calc data-key="btnClose">Закрыть</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="overlay project-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle" aria-hidden="true">
+        <article class="project-dialog">
+            <button type="button" class="close-button" data-close-project aria-label="Закрыть">+</button>
+            <p class="section-label" id="projectModalTag">/ project</p>
+            <h2 id="projectModalTitle"></h2>
+            <p id="projectModalText"></p>
+            <a class="button button-outline" id="projectModalLink" target="_blank" rel="noopener" data-key="btnView">Открыть сайт</a>
+        </article>
+    </section>
+
+    <div class="toast" id="siteToast" role="status" aria-live="polite"></div>
+</body>
+</html>
