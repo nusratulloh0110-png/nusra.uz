@@ -1,447 +1,452 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nusra | System Integrator & ex-DBA</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="description" content="Nusra - Process Design &amp; Automation в UZINFOCOM. Автоматизация процессов и рабочие цифровые решения.">
+    <title>Nusra | Process Design &amp; Automation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="cursor-follower" aria-hidden="true"></div>
 
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <span class="code-tag">&lt;</span>Nusra<span class="code-tag">/&gt;</span>
+    <nav class="site-nav" aria-label="Главная навигация">
+        <div class="container nav-inner">
+            <a class="logo" href="#top" aria-label="Nusra, на главную">
+                <span>&lt;</span>Nusra<span>/&gt;</span>
             </a>
 
-            <div class="nav-links desktop-menu">
-                <a href="#about" data-key="navAbout">About Me</a>
-                <a href="#portfolio" data-key="navPort">Portfolio</a>
-
-                <div class="lang-switch">
-                    <button onclick="changeLang('ru')" class="lang-btn active-lang">RU</button>
-                    <button onclick="changeLang('uz')" class="lang-btn">UZ</button>
-                    <button onclick="changeLang('en')" class="lang-btn">EN</button>
-                    <button onclick="changeLang('ai')" class="lang-btn ai-btn">AI</button>
+            <div class="nav-desktop">
+                <a href="#about" data-key="navAbout">Обо мне</a>
+                <a href="#services" data-key="navServices">Результаты</a>
+                <a href="#projects" data-key="navPort">Проекты</a>
+                <div class="language-switch" aria-label="Выбор языка">
+                    <button type="button" class="lang-button is-active" data-lang="ru">RU</button>
+                    <button type="button" class="lang-button" data-lang="uz">UZ</button>
+                    <button type="button" class="lang-button" data-lang="en">EN</button>
                 </div>
-
-                <button onclick="openCalc()" class="btn-gold-outline" data-key="btnOrder">Calculate Project</button>
+                <button type="button" class="button button-outline" data-open-calc data-key="btnOrder">Рассчитать</button>
             </div>
 
-            <div class="mobile-menu-controls">
-                <button onclick="openCalc()" class="btn-gold-outline mobile-order-btn" data-key="btnOrderMobile">Calculate</button>
-                <button class="menu-toggle" onclick="toggleMobileMenu()">
-                    <i class="fas fa-ellipsis-v"></i>
-                </button>
-            </div>
-
-            <div class="mobile-dropdown" id="mobileDropdown">
-                <a href="#about" onclick="toggleMobileMenu()" data-key="navAbout">About Me</a>
-                <a href="#portfolio" onclick="toggleMobileMenu()" data-key="navPort">Portfolio</a>
-
-                <div class="mobile-lang-title"><i class="fas fa-globe"></i> <span data-key="mobileLang">Language:</span></div>
-                <div class="lang-switch-mobile">
-                    <button onclick="changeLang('ru'); toggleMobileMenu()" class="lang-btn active-lang">RU</button>
-                    <button onclick="changeLang('uz'); toggleMobileMenu()" class="lang-btn">UZ</button>
-                    <button onclick="changeLang('en'); toggleMobileMenu()" class="lang-btn">EN</button>
-                    <button onclick="changeLang('ai'); toggleMobileMenu()" class="lang-btn ai-btn">AI</button>
-                </div>
-            </div>
+            <button type="button" class="menu-button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <header class="hero">
-        <div class="grid-bg"></div>
-        <div class="container hero-content" data-aos="fade-up">
-            <div class="code-badge">
-                <i class="fas fa-terminal"></i> <span id="typewriter" data-key="heroRole">System Integrator</span><span class="cursor">_</span>
-            </div>
-            <h1 data-key="heroTitle">I manage data and build <span class='gold-text'>fast websites</span>.</h1>
-            <p class="subtitle" data-key="heroSub">I am a specialist in the healthcare digitalization division at UZINFOCOM. I automate routine work, design databases, and develop modern web interfaces.</p>
-
-            <div class="hero-buttons" style="margin-bottom: 32px;">
-                <button onclick="openCalc()" class="btn-gold" data-key="btnCalc">Calculate Project</button>
-            </div>
-
-            <div class="hero-highlights">
-                <div class="highlight-card" data-aos="fade-up" data-aos-delay="50">
-                    <span class="highlight-label" data-key="highlight1Label">Current role</span>
-                    <strong data-key="highlight1Value">Digitalization specialist</strong>
-                </div>
-                <div class="highlight-card" data-aos="fade-up" data-aos-delay="100">
-                    <span class="highlight-label" data-key="highlight2Label">Previous experience</span>
-                    <strong data-key="highlight2Value">DBA and databases</strong>
-                </div>
-                <div class="highlight-card" data-aos="fade-up" data-aos-delay="150">
-                    <span class="highlight-label" data-key="highlight3Label">Education</span>
-                    <strong data-key="highlight3Value">TSTU</strong>
-                </div>
-                <div class="highlight-card" data-aos="fade-up" data-aos-delay="200">
-                    <span class="highlight-label" data-key="highlight4Label">Focus</span>
-                    <strong data-key="highlight4Value">Web and internal systems</strong>
-                </div>
-            </div>
-
-                        <div class="contact-terminal">
-                <div class="term-header">
-                    <span></span><span></span><span></span>
-                    <div class="term-title">contacts.sh</div>
-                </div>
-                <div class="term-body">
-                    <p><span class="code-tag">~</span> <span class="gold-text">echo</span> $PHONE_PERSONAL</p>
-                    <p class="term-output"><a href="tel:+998974807181">+998 97 480 71 81</a> <span data-key="termPersonal">(Personal)</span></p>
-                    <p><span class="code-tag">~</span> <span class="gold-text">echo</span> $PHONE_WORK</p>
-                    <p class="term-output"><a href="tel:+998946966566">+998 94 696 65 66</a> <span data-key="termWork">(Work)</span></p>
-                    <p><span class="code-tag">~</span> <span class="gold-text">echo</span> $SOCIALS</p>
-                    <p class="term-output">
-                        <a href="https://t.me/Nusra12345" target="_blank">Telegram: @Nusra12345</a> |
-                        <a href="https://instagram.com/Nusratikk" target="_blank">Insta: Nusratikk</a>
-                    </p>
-                </div>
-            </div>
+    <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu-links">
+            <a href="#about" data-key="navAbout">Обо мне</a>
+            <a href="#services" data-key="navServices">Результаты</a>
+            <a href="#projects" data-key="navPort">Проекты</a>
         </div>
-    </header>
-
-    <section id="about" class="section bg-light">
-        <div class="container">
-            <div class="section-header" data-aos="fade-right">
-                <h2><span class="code-tag">{</span> <span data-key="titleAbout">Where I Work</span> <span class="code-tag">}</span></h2>
-                <div class="line"></div>
-            </div>
-
-            <div class="about-card" data-aos="fade-up">
-                <img src="img/uzinfocom.png" alt="Uzinfocom Logo" class="company-logo" onerror="this.src='https://placehold.co/200x80/fff/D4AF37?text=UZINFOCOM'">
-                <div class="about-text">
-                    <h3 data-key="aboutCompany">Unified Integrator UZINFOCOM</h3>
-                    <p class="role" data-key="aboutRole">System Integrator | Healthcare Digitalization Division</p>
-                    <p data-key="aboutText">I work in the team building the National Digital Healthcare System (DMED). My role is to ensure data reliability, automate processes, and implement IT solutions that improve healthcare across the country.</p>
-                    <ul class="tech-stack">
-                        <li data-key="skill1"><i class='fas fa-link gold-text'></i> Database design and digital solution architecture</li>
-                        <li data-key="skill2"><i class='fas fa-database gold-text'></i> DBA experience: PostgreSQL, MySQL, data structure and reliability</li>
-                        <li data-key="skill3"><i class='fas fa-robot gold-text'></i> Process automation, scripts, EXE applications and web interfaces</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="info-grid profile-grid" data-aos="fade-up">
-                <div class="info-card">
-                    <span class="card-code">01</span>
-                    <h3 data-key="journeyTitle">Career Path</h3>
-                    <p data-key="journeyText">From DBA to solution development and integration: from deep data work to building complete digital products.</p>
-                </div>
-                <div class="info-card">
-                    <span class="card-code">02</span>
-                    <h3 data-key="educationTitle">Education</h3>
-                    <p data-key="educationText">Student at Tashkent State Transport University. I combine study with real project practice.</p>
-                </div>
-                <div class="info-card">
-                    <span class="card-code">03</span>
-                    <h3 data-key="sectorTitle">Experience</h3>
-                    <p data-key="sectorText">I work in healthcare digitalization, government projects, web development, and internal automation.</p>
-                </div>
-            </div>
+        <div class="language-switch" aria-label="Выбор языка">
+            <button type="button" class="lang-button is-active" data-lang="ru">RU</button>
+            <button type="button" class="lang-button" data-lang="uz">UZ</button>
+            <button type="button" class="lang-button" data-lang="en">EN</button>
         </div>
-    </section>
+        <button type="button" class="button button-primary" data-open-calc data-key="btnOrder">Рассчитать</button>
+    </aside>
 
-    <section class="section bg-light">
-        <div class="container">
-            <div class="section-header center" data-aos="fade-up">
-                <h2><span class="code-tag">&lt;</span> <span data-key="titleResults">Results</span> <span class="code-tag">/&gt;</span></h2>
-                <div class="line"></div>
-            </div>
+    <main id="top">
+        <header class="hero">
+            <div class="dot-grid" aria-hidden="true"></div>
+            <div class="container hero-layout">
+                <div class="status-pill reveal">
+                    <span class="terminal-prompt">&gt;_</span>
+                    <span data-key="heroRole">Process Design &amp; Automation</span>
+                    <span class="typing-cursor" aria-hidden="true"></span>
+                </div>
 
-            <div class="stats-grid" data-aos="fade-up">
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-heartbeat"></i></div>
-                    <h3 data-key="result1Title">DMED</h3>
-                    <p data-key="result1Text">I contribute to solutions for the national DMED medical system, where data reliability and process stability are critical.</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-building-columns"></i></div>
-                    <h3 data-key="result2Title">Web Solutions</h3>
-                    <p data-key="result2Text">I build websites and internal platforms with a focus on speed, usability, and clear structure.</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-cogs"></i></div>
-                    <h3 data-key="result3Title">Integrations</h3>
-                    <p data-key="result3Text">I connect databases, APIs, bots, internal services, and user interfaces into one system.</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fas fa-stopwatch"></i></div>
-                    <h3 data-key="result4Title">Automation</h3>
-                    <p data-key="result4Text">I reduce manual work through report automation, data exchange, and internal workflows.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                <h1 class="hero-title reveal" data-html-key="heroTitle">
+                    Проектирую.<br><span>Автоматизирую.</span>
+                </h1>
 
-    <section class="section bg-light">
-        <div class="container">
-            <div class="section-header center" data-aos="fade-up">
-                <h2><span class="code-tag">&lt;</span> <span data-key="titleProcess">How I Work</span> <span class="code-tag">/&gt;</span></h2>
-                <div class="line"></div>
-            </div>
+                <div class="hero-lower">
+                    <p class="hero-copy reveal" data-key="heroSub">Process Design &amp; Automation в UZINFOCOM. Проектирую процессы, автоматизирую операции и создаю рабочие цифровые продукты.</p>
+                    <button type="button" class="button button-primary hero-action reveal" data-open-calc data-key="btnCalc">Рассчитать проект</button>
+                </div>
 
-            <div class="process-grid" data-aos="fade-up">
-                <div class="process-card">
-                    <span class="process-step">01</span>
-                    <h3 data-key="process1Title">Analysis</h3>
-                    <p data-key="process1Text">I study the business process, goals, data structure, and current constraints.</p>
-                </div>
-                <div class="process-card">
-                    <span class="process-step">02</span>
-                    <h3 data-key="process2Title">Design</h3>
-                    <p data-key="process2Text">I assemble the solution architecture: services, links, APIs, databases, roles, and workflows.</p>
-                </div>
-                <div class="process-card">
-                    <span class="process-step">03</span>
-                    <h3 data-key="process3Title">Implementation</h3>
-                    <p data-key="process3Text">I develop modules, interfaces, bots, and internal tools as one system.</p>
-                </div>
-                <div class="process-card">
-                    <span class="process-step">04</span>
-                    <h3 data-key="process4Title">Launch and Support</h3>
-                    <p data-key="process4Text">I test, deploy, improve, and support the stable operation of the solution.</p>
+                <div class="hero-stats" aria-label="Ключевая информация">
+                    <article class="hero-stat reveal" style="--delay: 80ms">
+                        <span data-key="highlight1Label">Текущая роль</span>
+                        <strong data-key="highlight1Value">Process Design &amp; Automation</strong>
+                    </article>
+                    <article class="hero-stat reveal" style="--delay: 140ms">
+                        <span data-key="highlight2Label">Опыт</span>
+                        <strong data-key="highlight2Value">DBA и базы данных</strong>
+                    </article>
+                    <article class="hero-stat reveal" style="--delay: 200ms">
+                        <span data-key="highlight3Label">Образование</span>
+                        <strong data-key="highlight3Value">TSTU</strong>
+                    </article>
+                    <article class="hero-stat reveal" style="--delay: 260ms">
+                        <span data-key="highlight4Label">Фокус</span>
+                        <strong data-key="highlight4Value">Интеграции и веб-системы</strong>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <section id="portfolio" class="section">
-        <div class="container">
-            <div class="section-header center" data-aos="fade-up">
-                <h2><span class="code-tag">&lt;</span> <span data-key="titlePort">My Projects</span> <span class="code-tag">/&gt;</span></h2>
-                <div class="line"></div>
-            </div>
-
-            <div class="portfolio-grid">
-                <div class="port-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="port-header">
-                        <div style="font-size: 2rem; color: var(--gold);"><i class="fas fa-layer-group"></i></div>
-                        <span class="badge">Healthcare</span>
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section-divider reveal"><span>// about</span></div>
+                <div class="about-grid">
+                    <div class="about-heading reveal">
+                        <div class="metric">
+                            <span class="metric-number">03</span>
+                            <span class="metric-caption" data-key="metricCaption">ключевые компетенции</span>
+                        </div>
+                        <h2 data-html-key="aboutTitle">Данные. Процессы.<br><span>Интерфейсы.</span></h2>
+                        <p data-key="aboutIntro">Связываю сложные цифровые процессы в понятные и надёжные рабочие инструменты.</p>
                     </div>
-                    <h3 data-key="port1Title">Healthcare Digitalization System</h3>
-                    <p data-key="port1Text">A complex platform for medical processes with internal modules, automation, and working tools for teams.</p>
-                    <a href="https://dmed.nusra.uz/" target="_blank" class="port-link"><span data-key="btnView">Open Site</span> <i class="fas fa-arrow-right"></i></a>
-                </div>
 
-                <div class="port-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="port-header">
-                        <img src="img/uzaya.png" alt="UZAYA" onerror="this.src='https://placehold.co/150x50/fff/D4AF37?text=UZAYA'">
-                        <span class="badge" data-key="port2Badge">Web Development</span>
+                    <div class="competency-panel">
+                        <div class="availability reveal">
+                            <span class="availability-dot" aria-hidden="true"></span>
+                            <span data-key="availability">Available for work</span>
+                        </div>
+                        <article class="competency-card reveal" style="--delay: 80ms">
+                            <span class="competency-icon">01</span>
+                            <p data-key="skill1">Проектирование процессов и архитектура автоматизации</p>
+                        </article>
+                        <article class="competency-card reveal" style="--delay: 140ms">
+                            <span class="competency-icon">02</span>
+                            <p data-key="skill2">Сильный бэкграунд в PostgreSQL, MySQL и моделировании данных</p>
+                        </article>
+                        <article class="competency-card reveal" style="--delay: 200ms">
+                            <span class="competency-icon">03</span>
+                            <p data-key="skill3">Автоматизация, скрипты, EXE-инструменты и веб-интерфейсы</p>
+                        </article>
                     </div>
-                    <h3 data-key="port2Title">Road Association</h3>
-                    <p data-key="port2Text">An official website with modern design, administrative logic, and a convenient content publishing structure.</p>
-                    <a href="https://uzaya.uz" target="_blank" class="port-link"><span data-key="btnView">Open Site</span> <i class="fas fa-arrow-right"></i></a>
-                </div>
-
-                <div class="port-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="port-header">
-                        <div style="font-size: 2rem; color: var(--gold);"><i class="fas fa-id-card"></i></div>
-                        <span class="badge" data-key="port3Badge">Personal Site</span>
-                    </div>
-                    <h3 data-key="port3Title">Personal Landing Page</h3>
-                    <p data-key="port3Text">A fast responsive website focused on presentation, readability, and a modern visual style.</p>
-                    <a href="https://aruzhan.site" target="_blank" class="port-link"><span data-key="btnView">Open Site</span> <i class="fas fa-arrow-right"></i></a>
-                </div>
-
-                <div class="port-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="port-header">
-                        <div style="font-size: 2rem; color: var(--gold);"><i class="fas fa-file-signature"></i></div>
-                        <span class="badge">University</span>
-                    </div>
-                    <h3 data-key="port4Title">University Grade System</h3>
-                    <p data-key="port4Text">A web service for automating academic and internal processes at Tashkent State Transport University.</p>
-                    <a href="http://vedomost.nusra.uz/" target="_blank" class="port-link"><span data-key="btnView">Open Site</span> <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="premium-footer">
-        <div class="container footer-flex">
-            <div class="logo"><span class="code-tag">&lt;</span>Nusra<span class="code-tag">/&gt;</span></div>
+        <section class="section work-section" id="work">
+            <div class="container">
+                <div class="section-divider reveal"><span>// where_i_work</span></div>
+                <article class="work-card reveal">
+                    <div class="work-header">
+                        <div class="company-mark" aria-label="UZINFOCOM">
+                            <img src="img/uzinfocom-symbol.png" alt="" class="company-symbol">
+                            <span class="company-wordmark">UZINFOCOM</span>
+                        </div>
+                        <div class="work-position">
+                            <p class="mono" data-key="aboutRole">Process Design &amp; Automation | UZINFOCOM</p>
+                            <div class="pills">
+                                <span>Process Design</span>
+                                <span>Automation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="work-summary" data-key="aboutText">В UZINFOCOM проектирую процессы и автоматизирую рабочие операции: от структуры данных и сценариев до удобных внутренних инструментов.</p>
+                    <div class="work-details">
+                        <article>
+                            <span class="background-index">01</span>
+                            <h3 data-key="journeyTitle">Путь</h3>
+                            <p data-key="journeyText">От DBA к Process Design &amp; Automation: от глубокой работы с данными к проектированию и автоматизации процессов.</p>
+                        </article>
+                        <article>
+                            <span class="background-index">02</span>
+                            <h3 data-key="educationTitle">Образование</h3>
+                            <p data-key="educationText">Студент Ташкентского государственного транспортного университета, совмещаю учёбу с реальной проектной практикой.</p>
+                        </article>
+                        <article>
+                            <span class="background-index">03</span>
+                            <h3 data-key="sectorTitle">Опыт</h3>
+                            <p data-key="sectorText">Госсервисы, цифровизация здравоохранения, веб-разработка и внутренняя автоматизация.</p>
+                        </article>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-            <div class="footer-contacts">
-                <a href="tel:+998974807181" class="footer-phone"><i class="fas fa-phone-alt"></i> +998 97 480 71 81</a>
-                <div class="footer-socials">
-                    <a href="https://t.me/Nusra12345" target="_blank" class="social-btn"><i class="fab fa-telegram"></i> Telegram</a>
-                    <a href="https://instagram.com/Nusratikk" target="_blank" class="social-btn"><i class="fab fa-instagram"></i> Instagram</a>
+        <section class="section services-section" id="services">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="section-label">// results</p>
+                    <h2 data-key="titleResults">Результаты</h2>
+                </div>
+                <div class="services-track" data-swipe-track>
+                    <article class="service-item reveal" style="--delay: 60ms">
+                        <span class="service-number">01</span>
+                        <h3 data-key="result1Title">DMED</h3>
+                        <p data-key="result1Text">Участвую в решениях для национальной медицинской системы, где критичны надёжность данных и стабильность процессов.</p>
+                    </article>
+                    <article class="service-item reveal" style="--delay: 110ms">
+                        <span class="service-number">02</span>
+                        <h3 data-key="result2Title">Веб-решения</h3>
+                        <p data-key="result2Text">Создаю сайты и внутренние платформы с акцентом на скорость, понятность и практичность.</p>
+                    </article>
+                    <article class="service-item reveal" style="--delay: 160ms">
+                        <span class="service-number">03</span>
+                        <h3 data-key="result3Title">Интеграции</h3>
+                        <p data-key="result3Text">Связываю базы данных, API, ботов и внутренние сервисы в единую работающую систему.</p>
+                    </article>
+                    <article class="service-item reveal" style="--delay: 210ms">
+                        <span class="service-number">04</span>
+                        <h3 data-key="result4Title">Автоматизация</h3>
+                        <p data-key="result4Text">Сокращаю ручную работу через автоматизацию отчётов, обмена данными и операционных процессов.</p>
+                    </article>
                 </div>
             </div>
+        </section>
 
-            <p data-key="footerText">Nusra</p>
+        <section class="section process-section" id="process">
+            <div class="container process-layout">
+                <div class="section-head reveal">
+                    <p class="section-label">// how_i_work</p>
+                    <h2 data-key="titleProcess">Как я работаю</h2>
+                </div>
+                <div class="timeline" data-timeline>
+                    <span class="timeline-track" aria-hidden="true"></span>
+                    <span class="timeline-fill" aria-hidden="true"></span>
+                    <article class="timeline-step reveal">
+                        <span>01</span>
+                        <h3 data-key="process1Title">Анализ</h3>
+                        <p data-key="process1Text">Разбираю процесс, ограничения и ожидаемый результат.</p>
+                    </article>
+                    <article class="timeline-step reveal">
+                        <span>02</span>
+                        <h3 data-key="process2Title">Проектирование</h3>
+                        <p data-key="process2Text">Определяю структуру сервисов, API, данных и ролей.</p>
+                    </article>
+                    <article class="timeline-step reveal">
+                        <span>03</span>
+                        <h3 data-key="process3Title">Реализация</h3>
+                        <p data-key="process3Text">Разрабатываю интерфейсы, интеграции, ботов и внутренние модули.</p>
+                    </article>
+                    <article class="timeline-step reveal">
+                        <span>04</span>
+                        <h3 data-key="process4Title">Запуск и поддержка</h3>
+                        <p data-key="process4Text">Тестирую, запускаю и довожу решение до стабильной работы.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="section-label">// projects</p>
+                    <h2 data-key="titlePort">Проекты</h2>
+                </div>
+                <div class="filesystem reveal" role="table" aria-label="Список проектов">
+                    <div class="project-header" role="row">
+                        <span data-key="projectName">/ name</span>
+                        <span data-key="projectCategory">type</span>
+                        <span class="project-year" data-key="projectYear">status</span>
+                        <span aria-hidden="true"></span>
+                    </div>
+                    <button type="button" class="project-row" data-project="0" role="row">
+                        <span class="project-main">
+                            <strong data-key="qaiTitle">q-ai.uz / Quantum-AI Wealth Guardian</strong>
+                            <small data-key="qaiSummary">AI-сервис для оценки риска криптопортфеля и расчёта целевых весов.</small>
+                        </span>
+                        <span class="tag">AI / FinTech</span>
+                        <span class="project-year">LIVE</span>
+                        <span class="row-arrow">-&gt;</span>
+                    </button>
+                    <button type="button" class="project-row" data-project="1" role="row">
+                        <span class="project-main">
+                            <strong data-key="saaliTitle">saali.uz</strong>
+                            <small data-key="saaliSummary">Магазин и лендинг дизайнерши с презентацией бренда и каталогом.</small>
+                        </span>
+                        <span class="tag" data-key="saaliBadge">E-commerce / Design</span>
+                        <span class="project-year">LIVE</span>
+                        <span class="row-arrow">-&gt;</span>
+                    </button>
+                    <button type="button" class="project-row" data-project="2" role="row">
+                        <span class="project-main">
+                            <strong data-key="port1Title">Система цифровизации здравоохранения</strong>
+                            <small data-key="port1Summary">Рабочие инструменты и автоматизация медицинских процессов.</small>
+                        </span>
+                        <span class="tag">Healthcare</span>
+                        <span class="project-year">LIVE</span>
+                        <span class="row-arrow">-&gt;</span>
+                    </button>
+                    <button type="button" class="project-row" data-project="3" role="row">
+                        <span class="project-main">
+                            <strong data-key="port2Title">Ассоциация автодорожников Узбекистана</strong>
+                            <small data-key="port2Summary">Официальный сайт отраслевой ассоциации с удобной подачей информации.</small>
+                        </span>
+                        <span class="tag" data-key="port2Badge">Веб-разработка</span>
+                        <span class="project-year">LIVE</span>
+                        <span class="row-arrow">-&gt;</span>
+                    </button>
+                    <button type="button" class="project-row" data-project="4" role="row">
+                        <span class="project-main">
+                            <strong data-key="port3Title">Персональный лендинг</strong>
+                            <small data-key="port3Summary">Личный сайт для презентации экспертизы и контактов.</small>
+                        </span>
+                        <span class="tag" data-key="port3Badge">Персональный сайт</span>
+                        <span class="project-year">LIVE</span>
+                        <span class="row-arrow">-&gt;</span>
+                    </button>
+                    <button type="button" class="project-row" data-project="5" role="row">
+                        <span class="project-main">
+                            <strong data-key="port4Title">Система ведомостей университета</strong>
+                            <small data-key="port4Summary">Веб-сервис для автоматизации академических ведомостей.</small>
+                        </span>
+                        <span class="tag">University</span>
+                        <span class="project-year">LIVE</span>
+                        <span class="row-arrow">-&gt;</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+        <div class="footer-watermark" aria-hidden="true">&lt;N/&gt;</div>
+        <div class="container footer-content">
+            <p class="section-label reveal">// contact</p>
+            <h2 class="reveal" data-html-key="footerTitle">Готов к новым<br><span>проектам.</span></h2>
+            <div class="footer-contacts reveal">
+                <a class="terminal-link" href="tel:+998974807181"><span>$ phone.personal</span>+998 97 480 71 81</a>
+                <a class="terminal-link" href="tel:+998946966566"><span>$ phone.work</span>+998 94 696 65 66</a>
+            </div>
+            <div class="footer-bottom">
+                <div class="socials">
+                    <a href="https://t.me/Nusra12345" target="_blank" rel="noopener">Telegram</a>
+                    <a href="https://instagram.com/Nusratikk" target="_blank" rel="noopener">Instagram</a>
+                </div>
+                <span class="copyright">&copy; 2026 Nusra</span>
+                <div class="language-switch" aria-label="Выбор языка">
+                    <button type="button" class="lang-button is-active" data-lang="ru">RU</button>
+                    <button type="button" class="lang-button" data-lang="uz">UZ</button>
+                    <button type="button" class="lang-button" data-lang="en">EN</button>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <div class="modal-overlay" id="calcModal">
-        <div class="modal-content">
-            <button class="close-btn" onclick="closeCalc()">&times;</button>
-            <div class="modal-header">
-                <h2 data-key="modalTitle">Calculate <span class='gold-text'>Project</span></h2>
-                <p class="monospaced" data-key="modalSub">// Services in databases, automation and development</p>
-            </div>
-
-            <div class="modal-grid">
-
-                <div class="interactive-terminal">
-                    <div class="term-header">
-                        <span></span><span></span><span></span>
-                        <div class="term-title">system.log</div>
-                    </div>
-                    <div class="term-body" id="sysTerminal"></div>
+    <section class="overlay calculator-overlay" id="calcModal" role="dialog" aria-modal="true" aria-labelledby="calcTitle" aria-hidden="true">
+        <div class="calculator">
+            <header class="calculator-header">
+                <div>
+                    <p class="section-label">// calculate_project</p>
+                    <h2 id="calcTitle" data-html-key="modalTitle">Рассчитать <span>проект</span></h2>
                 </div>
-
-                <form id="orderForm" class="calc-form">
-
-                    <div class="mobile-term-btn-wrapper">
-                        <button type="button" class="btn-gold-outline mobile-term-btn" onclick="toggleMobileTerminal()">
-                            <i class="fas fa-terminal"></i> <span data-key="btnToggleTerm">Terminal (logs)</span>
-                        </button>
+                <button type="button" class="close-button" data-close-calc aria-label="Закрыть">+</button>
+            </header>
+            <div class="progress">
+                <span class="progress-value" aria-hidden="true"></span>
+                <span class="progress-copy"><span data-key="stepLabel">шаг</span> <strong id="stepValue">01</strong> / 03</span>
+            </div>
+            <div class="calculator-grid">
+                <aside class="log-terminal" aria-label="System logs">
+                    <div class="terminal-header">
+                        <span></span><span></span><span></span>
+                        <small>system.log</small>
                     </div>
+                    <div class="terminal-lines" id="sysTerminal" aria-live="polite"></div>
+                </aside>
 
-                    <div class="calc-block">
-                        <label data-key="labelService">What service do you need?</label>
-                        <div class="service-grid service-grid-extended">
-                            <label class="service-radio">
-                                <input type="radio" name="projectType" value="120" checked data-name="Landing / Business Card">
-                                <div class="service-card">
-                                    <div class="srv-info">
-                                        <i class="fas fa-pager"></i>
-                                        <span class="srv-title" data-key="srv1">Landing / business card</span>
-                                    </div>
-                                    <span class="srv-price" data-base-price="120">FROM $120</span>
-                                </div>
-                            </label>
+                <form class="calc-form" id="orderForm">
+                    <div class="calc-flow" id="calcFlow">
+                        <fieldset class="calc-step is-active" data-step="1">
+                            <legend data-key="labelService">Какая услуга нужна?</legend>
+                            <div class="choice-grid">
+                                <label class="choice">
+                                    <input type="radio" name="projectType" value="120" data-name="Landing / Business Card" checked>
+                                    <span><strong data-key="srv1">Лендинг / визитка</strong><small data-price="120">от $120</small></span>
+                                </label>
+                                <label class="choice">
+                                    <input type="radio" name="projectType" value="280" data-name="Corporate Website">
+                                    <span><strong data-key="srv2">Корпоративный сайт</strong><small data-price="280">от $280</small></span>
+                                </label>
+                                <label class="choice">
+                                    <input type="radio" name="projectType" value="150" data-name="Telegram Bot">
+                                    <span><strong data-key="srv3">Telegram-бот</strong><small data-price="150">от $150</small></span>
+                                </label>
+                                <label class="choice">
+                                    <input type="radio" name="projectType" value="170" data-name="DB Setup / Parser">
+                                    <span><strong data-key="srv4">Настройка БД / парсер</strong><small data-price="170">от $170</small></span>
+                                </label>
+                                <label class="choice">
+                                    <input type="radio" name="projectType" value="230" data-name="API / Service Integration">
+                                    <span><strong data-key="srv5">API / интеграция сервисов</strong><small data-price="230">от $230</small></span>
+                                </label>
+                                <label class="choice">
+                                    <input type="radio" name="projectType" value="390" data-name="Internal System / CRM / ERP Module">
+                                    <span><strong data-key="srv6">Внутренняя система / CRM / ERP модуль</strong><small data-price="390">от $390</small></span>
+                                </label>
+                            </div>
+                        </fieldset>
 
-                            <label class="service-radio">
-                                <input type="radio" name="projectType" value="280" data-name="Corporate Website">
-                                <div class="service-card">
-                                    <div class="srv-info">
-                                        <i class="fas fa-globe"></i>
-                                        <span class="srv-title" data-key="srv2">Corporate website</span>
-                                    </div>
-                                    <span class="srv-price" data-base-price="280">FROM $280</span>
-                                </div>
+                        <fieldset class="calc-step" data-step="2">
+                            <legend data-key="labelOptions">Дополнительные опции</legend>
+                            <label class="option">
+                                <input type="checkbox" class="feature-calc" value="80" data-name="Unique Design">
+                                <span class="checkbox"></span>
+                                <span data-key="opt1">Уникальный дизайн</span>
+                                <small>+ $80</small>
                             </label>
+                            <label class="option">
+                                <input type="checkbox" class="feature-calc" value="0" data-name="Multilingual">
+                                <span class="checkbox"></span>
+                                <span data-key="opt2">Мультиязычность (3 языка)</span>
+                                <small data-key="optFree">[ бесплатно ]</small>
+                            </label>
+                            <label class="option">
+                                <input type="checkbox" class="feature-calc" value="70" data-name="Urgent Execution">
+                                <span class="checkbox"></span>
+                                <span data-key="opt3">Срочный запуск</span>
+                                <small>+ $70</small>
+                            </label>
+                        </fieldset>
 
-                            <label class="service-radio">
-                                <input type="radio" name="projectType" value="150" data-name="Telegram Bot">
-                                <div class="service-card">
-                                    <div class="srv-info">
-                                        <i class="fas fa-robot"></i>
-                                        <span class="srv-title" data-key="srv3">Telegram bot</span>
-                                    </div>
-                                    <span class="srv-price" data-base-price="150">FROM $150</span>
-                                </div>
+                        <fieldset class="calc-step" data-step="3">
+                            <legend data-key="labelData">Ваши данные</legend>
+                            <div class="estimate">
+                                <span data-key="labelTotal">Оценка бюджета</span>
+                                <strong id="totalPrice">от $120</strong>
+                            </div>
+                            <input type="text" id="clientName" required class="input log-input" data-field="Name" placeholder="Имя">
+                            <input type="tel" id="clientPhone" required class="input log-input" data-field="Phone" placeholder="+998 90 000 00 00">
+                            <textarea id="clientComment" class="input log-input" data-field="Comment" rows="3" placeholder="Комментарий"></textarea>
+                            <label class="website-field" aria-hidden="true">
+                                Leave empty
+                                <input type="text" id="clientWebsite" tabindex="-1" autocomplete="off">
                             </label>
+                        </fieldset>
 
-                            <label class="service-radio">
-                                <input type="radio" name="projectType" value="170" data-name="DB Setup / Parser">
-                                <div class="service-card">
-                                    <div class="srv-info">
-                                        <i class="fas fa-database"></i>
-                                        <span class="srv-title" data-key="srv4">DB setup / parser</span>
-                                    </div>
-                                    <span class="srv-price" data-base-price="170">FROM $170</span>
-                                </div>
-                            </label>
-
-                            <label class="service-radio">
-                                <input type="radio" name="projectType" value="230" data-name="API / Service Integration">
-                                <div class="service-card">
-                                    <div class="srv-info">
-                                        <i class="fas fa-plug"></i>
-                                        <span class="srv-title" data-key="srv5">API / service integration</span>
-                                    </div>
-                                    <span class="srv-price" data-base-price="230">FROM $230</span>
-                                </div>
-                            </label>
-
-                            <label class="service-radio">
-                                <input type="radio" name="projectType" value="390" data-name="Internal System / CRM / ERP Module">
-                                <div class="service-card">
-                                    <div class="srv-info">
-                                        <i class="fas fa-sitemap"></i>
-                                        <span class="srv-title" data-key="srv6">Internal system / CRM / ERP module</span>
-                                    </div>
-                                    <span class="srv-price" data-base-price="390">FROM $390</span>
-                                </div>
-                            </label>
+                        <div class="calc-actions">
+                            <button type="button" class="button button-quiet" id="prevStep" data-key="btnBack">Назад</button>
+                            <button type="button" class="button button-primary" id="nextStep" data-key="btnNext">Далее</button>
+                            <button type="submit" class="button button-primary" id="submitBtn" data-key="btnSend">Отправить заявку</button>
                         </div>
                     </div>
 
-                    <div class="calc-block">
-                        <label data-key="labelOptions">Additional options:</label>
-                        <label class="custom-checkbox">
-                            <input type="checkbox" class="feature-calc" value="80" data-name="Unique Design">
-                            <span class="checkmark"></span>
-                            <span class="option-copy">
-                                <span class="option-title" data-key="opt1">Unique design</span>
-                                <span class="option-price bonus-price">(+ $80)</span>
-                            </span>
-                        </label>
-                        <label class="custom-checkbox">
-                            <input type="checkbox" class="feature-calc" value="0" data-name="Multilingual">
-                            <span class="checkmark"></span>
-                            <span class="option-copy">
-                                <span class="option-title" data-key="opt2">Multilingual (3 languages)</span>
-                                <span class="option-price bonus-free" data-key="optFree">[ free ]</span>
-                            </span>
-                        </label>
-                        <label class="custom-checkbox">
-                            <input type="checkbox" class="feature-calc" value="70" data-name="Urgent Execution">
-                            <span class="checkmark"></span>
-                            <span class="option-copy">
-                                <span class="option-title" data-key="opt3">Urgent delivery</span>
-                                <span class="option-price bonus-price">(+ $70)</span>
-                            </span>
-                        </label>
-                    </div>
-
-                    <div class="calc-block mt-4">
-                        <label data-key="labelData">Your data (String):</label>
-                        <input type="text" id="clientName" placeholder="Name" required class="premium-input mb-3 log-input" data-field="Name">
-                        <input type="tel" id="clientPhone" placeholder="+998 90 000 00 00" required class="premium-input mb-3 log-input" data-field="Phone">
-                        <textarea id="clientComment" placeholder="Comment / /* Comment */" rows="3" class="premium-input mb-3 log-input" data-field="Comment" style="resize: vertical;"></textarea>
-                    </div>
-
-                    <div class="calc-footer">
-                        <div class="total-price-box">
-                            <span class="total-label" data-key="labelTotal">Estimated budget:</span>
-                            <span id="totalPrice" class="total-amount">FROM $120</span>
-                        </div>
-                        <button type="submit" class="btn-gold" id="submitBtn" data-key="btnSend">Send Request</button>
+                    <div class="calc-result" id="calcResult" hidden>
+                        <p class="mono" data-key="resultReady">estimate.ready()</p>
+                        <strong id="resultPrice">от $120</strong>
+                        <p data-key="resultMessage">Заявка отправлена. Сообщение уже доставлено в Telegram.</p>
+                        <button type="button" class="button button-outline" data-close-calc data-key="btnClose">Закрыть</button>
                     </div>
                 </form>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="modal-overlay" id="aiModal">
-        <div class="modal-content" style="max-width: 450px; text-align: center; padding: 30px;">
-            <h2 style="color: #e1306c; margin-bottom: 15px;"><i class="fas fa-microchip"></i> <span data-key="aiModalTitle">Warning: AI mode</span></h2>
-            <p style="margin-bottom: 25px; line-height: 1.6; color: var(--text-dark);" data-key="aiModalText">This language is intended only for reading and parsing by Large Language Models (LLM). <br><br><b>For a regular user, the interface will look like system code.</b> Are you sure you want to switch?</p>
-            <div style="display: flex; gap: 15px; justify-content: center;">
-                <button class="btn-gold-outline" onclick="closeAiModal()" data-key="aiModalCancel">Cancel</button>
-                <button class="btn-gold" onclick="confirmAiLang()" style="background: #111;" data-key="aiModalConfirm">Enable AI</button>
-            </div>
-        </div>
-    </div>
+    <section class="overlay project-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle" aria-hidden="true">
+        <article class="project-dialog">
+            <button type="button" class="close-button" data-close-project aria-label="Закрыть">+</button>
+            <p class="section-label" id="projectModalTag">/ project</p>
+            <h2 id="projectModalTitle"></h2>
+            <p id="projectModalText"></p>
+            <a class="button button-outline" id="projectModalLink" target="_blank" rel="noopener" data-key="btnView">Открыть сайт</a>
+        </article>
+    </section>
 
-    <div id="siteToast" class="site-toast">
-        <i class="fas fa-check-circle toast-icon"></i>
-        <span id="toastMessage">Request sent successfully!</span>
-    </div>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <div class="toast" id="siteToast" role="status" aria-live="polite"></div>
 </body>
 </html>
-
-
-
-
